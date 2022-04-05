@@ -8,22 +8,39 @@ Also interesting sub-title
 
 Here a detail applying to the very interesting sub-title in connection to what I've outlined in the title!
 
-.. image:: C:/Users/julia/OneDrive/Dokumenty/MSc/150H/WebBook/img/my.JPG
-	:alt: This is us in El Chorro.
+.. image:: C:/Users/julia/OneDrive/Dokumenty/MSc/150H/WebBook/OneDrive/Dokumenty/MSc/150H/WebBook/img/lovethismeme.jpg
+	:alt: math meme.
 
 I have some questions:
 
-+ Aren't we the cutest?
-	- I know we are but still
++ Why the frog is so elegant?
+	- *Because he's a gentelman*
 
-+ Why are we so cute?
-	- Bc we just are :)
++ Is he right?
+	- **I've not checked, but based on his appereance I'd say he's not lying**
 
-.. note:: Julia and Piotrek are really damn cute!
-.. warning:: They may be too cute for you!
-.. danger:: They are also very hot, careful when approaching not to get burned!
+:file:`random text in a file format`
 
-`external link <https://www.thecrag.com/en/climbing/spain/sella>`_
+:data:`some data would go here`
 
-.. _intro:
-* :ref:`subtitle` ?? (19/26)
+:kbd:`ENTER`
+
+:guilabel:`we don't even really know`
+
+.. note:: A note about the topic
+.. warning:: Understand this to proceed!
+.. danger:: If you don't understand THIS part, you wo't understand the next one.
+
+`external link <https://docutils.sourceforge.io/docs/ref/rst/directives.html#raw-data-pass-through>`_
+
+
+:ref:`Very interesting title`
+
+.. raw:: html
+
+	<iframe
+	src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d6085.36089
+	2068745!2d9.226571306054593!3d45.479461266190164!2m3!1f0!2f0!3f0!3m2!
+	1i1024!2i768!4f13.1!5e0!3m2!1sit!2sit!4v1603108894032!5m2!1sit!2sit" 
+	width="600" height="450" frameborder="0" style="border:0" 
+	allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
