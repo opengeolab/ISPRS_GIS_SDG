@@ -1,4 +1,4 @@
-Very interesting title
+Introduction to SDGs
 ======================
 
 A main introduction under a very interesting title!
@@ -33,8 +33,6 @@ I have some questions:
 
 `external link <https://docutils.sourceforge.io/docs/ref/rst/directives.html#raw-data-pass-through>`_
 
-
-:ref:`Very interesting title`
 
 .. raw:: html
 

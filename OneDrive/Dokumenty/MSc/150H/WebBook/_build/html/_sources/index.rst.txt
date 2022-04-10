@@ -9,9 +9,14 @@ Welcome to ISPRSWebBook's documentation!
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
+   :glob:
+   :numbered:
 
-   introduction/intro
-
+   part1/part1
+   part2/part2
+   part3/part3
+   part4/part4
+   
 Indices and tables
 ==================
 
