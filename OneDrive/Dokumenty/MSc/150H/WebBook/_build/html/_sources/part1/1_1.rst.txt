@@ -3,29 +3,26 @@ Introduction to SDGs
 
 A main introduction under a very interesting title!
 
-Also interesting sub-title
+Why SDGs?
 --------------------------
 
 Here a detail applying to the very interesting sub-title in connection to what I've outlined in the title!
 
-.. image:: C:/Users/julia/OneDrive/Dokumenty/MSc/150H/WebBook/OneDrive/Dokumenty/MSc/150H/WebBook/img/lovethismeme.jpg
-	:alt: math meme.
-
 I have some questions:
 
-+ Why the frog is so elegant?
-	- *Because he's a gentelman*
++ First question
+	- *answer in italic*
 
-+ Is he right?
-	- **I've not checked, but based on his appereance I'd say he's not lying**
++ Second question
+	- **answer in bold**
 
 :file:`random text in a file format`
 
 :data:`some data would go here`
 
-:kbd:`ENTER`
+:kbd:`key to press`
 
-:guilabel:`we don't even really know`
+:guilabel:`a funky text format`
 
 .. note:: A note about the topic
 .. warning:: Understand this to proceed!
