@@ -27,8 +27,21 @@ author = 'Julia Anna Leonardi'
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
-extensions = [ 'sphinx.ext.autosectionlabel'
+extensions = [ 'sphinx.ext.autosectionlabel', 'sphinx_rtd_theme'
 ]
+
+numfig = True
+
+numfig_secnum_depth = 3
+
+# The suffix(es) of source filenames.
+# You can specify multiple suffix as a list of string:
+#
+# source_suffix = ['.rst', '.md']
+source_suffix = '.rst'
+
+# The master toctree document.
+master_doc = 'index'
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -46,8 +59,21 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 #
 html_theme = 'sphinx_rtd_theme'
 
+html_logo = './img/ICO.png'
+
+# Theme options are theme-specific and customize the look and feel of a theme
+# further.  For a list of options available for each theme, see the
+# documentation.
+#
+html_theme_options = {
+    'logo_only': True,
+    'style_external_links': True,
+    'collapse_navigation': False,
+    'includehidden': False,
+    'style_nav_header_background': '#55a1c9',
+}
+
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
-html_static_path = ['_static']
-master_doc = 'index'
+html_static_path = ['./_static']
