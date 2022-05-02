@@ -1,35 +1,31 @@
+.. _1.1:
+
 Introduction to SDGs
 ======================
 
-A main introduction under a very interesting title!
+TEMPLATE OF A DOC PAGE - Main title of section
+===============================================
 
-Why SDGs?
---------------------------
+`Links <https://www.google.com>`_
 
-Here a detail applying to the very interesting sub-title in connection to what I've outlined in the title!
+Figures are numerated by the number of part and subchapter of part followed by the number of the figure in the given section. They will be referenced numerically as follows: 
+:numref:`1.1.1`
 
-I have some questions:
+.. _1.1.1:
+.. figure:: /img/1.1.1.png
 
-+ First question
-	- *answer in italic*
+	-- This is how a figure will be described. Source: https://www.nonsoloambiente.it/italy-17-sdgs
 
-+ Second question
-	- **answer in bold**
 
-:file:`random text in a file format`
 
-:data:`some data would go here`
+This is how a list will be represented:
 
-:kbd:`key to press`
++ One [1]_
++ Two
 
-:guilabel:`a funky text format`
+:ref:`a reference to somewhere in the file <2.1>`
 
-.. note:: A note about the topic
-.. warning:: Understand this to proceed!
-.. danger:: If you don't understand THIS part, you wo't understand the next one.
-
-`external link <https://docutils.sourceforge.io/docs/ref/rst/directives.html#raw-data-pass-through>`_
-
+.. [1] Bibliography at the end in APA style.
 
 .. raw:: html
 

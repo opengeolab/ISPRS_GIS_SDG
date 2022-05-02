@@ -10,6 +10,7 @@ TEMPLATE OF A DOC PAGE - Main title of section
 
 Figures are numerated by the number of part and subchapter of part followed by the number of the figure in the given section. They will be referenced numerically as follows: 
 :numref:`1.1.1`
+
 .. _1.1.1:
 .. figure:: /img/1.1.1.png
 
@@ -19,7 +20,7 @@ Figures are numerated by the number of part and subchapter of part followed by t
 
 This is how a list will be represented:
 
-+ One
++ One [1]_
 + Two
 
 :ref:`a reference to somewhere in the file <2.1>`
