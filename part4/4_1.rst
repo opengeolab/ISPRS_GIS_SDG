@@ -1,2 +1,9 @@
 Forest area as a proportion of total land area [15.1.1]
 ========================================================
+
+In this exercise you will learn how to calculate the indicator 15.1.1 which is defined as the forest area as a proportion of total land area, and is expressed in percentages. To learn more about this indicator read the metadata provided under this `link <https://unstats.un.org/sdgs/metadata/?Text=&Goal=15&Target=15.1>`_.
+
+The method of computation is given by the following formula:
+Forest area (reference year)Land area (reference year) 100,
+thus we need to first define the region and reference year for which the indicator needs to be calculated. After that, we need to estimate the forest area and land area of the region. In this case study we’ll be working on calculating the indicator for Suriname for the reference year 2019. 
+The first step is to download from: https://datacatalog.worldbank.org/search/dataset/0038272 the vector data of the countries in shapefile format (Figure 4.1.1). This file will also come useful in next exercises, while calculating other indicators. The file contains polygons of all the world’s countries.
