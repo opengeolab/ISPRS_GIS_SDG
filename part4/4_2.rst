@@ -1,2 +1,97 @@
 Ratio of land consumption rate to population growth rate [11.3.1]
 ==================================================================
+
+.. _4.2.1:
+.. figure:: /img/4.2/4.2.1.png
+
+	blah blah
+
+.. _4.2.2:
+.. figure:: /img/4.2/4.2.2.png
+
+	blah blah
+
+.. _4.2.3:
+.. figure:: /img/4.2/4.2.3.png
+
+	blah blah
+
+.. _4.2.4:
+.. figure:: /img/4.2/4.2.4.png
+
+	blah blah
+
+.. _4.2.5:
+.. figure:: /img/4.2/4.2.5.png
+
+	blah blah
+
+.. _4.2.6:
+.. figure:: /img/4.2/4.2.6.png
+
+	blah blah
+
+.. _4.2.7:
+.. figure:: /img/4.2/4.2.7.png
+
+	blah blah
+
+.. _4.2.8:
+.. figure:: /img/4.2/4.2.8.png
+
+	blah blah
+
+.. _4.2.9:
+.. figure:: /img/4.2/4.2.9.png
+
+	blah blah
+
+.. _4.2.10:
+.. figure:: /img/4.2/4.2.10.png
+
+	blah blah
+
+.. _4.2.11:
+.. figure:: /img/4.2/4.2.11.png
+
+	blah blah
+
+.. _4.2.12:
+.. figure:: /img/4.2/4.2.12.png
+
+	blah blah
+
+.. _4.2.13:
+.. figure:: /img/4.2/4.2.13.png
+
+	blah blah
+
+.. _4.2.14:
+.. figure:: /img/4.2/4.2.14.png
+
+	blah blah
+
+.. _4.2.15:
+.. figure:: /img/4.2/4.2.15.png
+
+	blah blah
+
+.. _4.2.16:
+.. figure:: /img/4.2/4.2.16.png
+
+	blah blah
+
+.. _4.2.17:
+.. figure:: /img/4.2/4.2.17.png
+
+	blah blah
+
+.. _4.2.18:
+.. figure:: /img/4.2/4.2.18.png
+
+	blah blah
+
+.. _4.2.19:
+.. figure:: /img/4.2/4.2.19.png
+
+	blah blah
