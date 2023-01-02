@@ -1,37 +1,16 @@
 .. _1.1:
 
-Introduction to SDGs
-======================
+Introduction to United Nation Sustainable Development Goals
+============================================================
 
-TEMPLATE OF A DOC PAGE - Main title of section
-
-
-`Links <https://www.google.com>`_
-
-Figures are numerated by the number of part and subchapter of part followed by the number of the figure in the given section. They will be referenced numerically as follows: 
-:numref:`1.1.1`
+`The 2030 Agenda for Sustainable Development <https://sdgs.un.org/2030agenda>`_, adopted by all United Nations Member States in 2015, provides a “*shared blueprint for peace and prosperity for people and the planet, now and into the future*”. At its core are the `17 Sustainable Development Goals (SDGs) <https://sdgs.un.org/goals>`_, which are an urgent call for action by both developed and developing countries in a global partnership (:numref:`1.1.1`). The 17 SDGs comprise 169 targets which can be tracked and monitored through `231 unique indicators <https://unstats.un.org/sdgs/metadata>`_. These indicators aim to balance the economic, social and ecological dimensions of sustainable development, by means of measurable and comparable indexes [#0]_.
 
 .. _1.1.1:
-.. figure:: /img/1.1.1.png
+.. figure:: /img/1.1/1.1.1.png
 
-	-- This is how a figure will be described. Source: https://www.nonsoloambiente.it/italy-17-sdgs
+	Sustainable Development Goals. Source: https://www.un.org/en/sustainable-development-goals
 
 
+.. rubric:: Footnotes
 
-This is how a list will be represented:
-
-+ One [1]_
-+ Two
-
-:ref:`a reference to somewhere in the file <2.1>`
-
-.. [1] Bibliography at the end in APA style.
-
-.. raw:: html
-
-	<iframe
-	src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d6085.36089
-	2068745!2d9.226571306054593!3d45.479461266190164!2m3!1f0!2f0!3f0!3m2!
-	1i1024!2i768!4f13.1!5e0!3m2!1sit!2sit!4v1603108894032!5m2!1sit!2sit" 
-	width="600" height="450" frameborder="0" style="border:0" 
-	allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+.. [#0] United Nations (2022). Global indicator framework for the Sustainable Development Goals and targets of the 2030 Agenda for Sustainable Development. Global indicator framework adopted by the General Assembly in A/RES/71/313
