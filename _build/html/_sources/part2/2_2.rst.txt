@@ -1,2 +1,29 @@
 Other relevant global geospatial datasets for SDGs
 ====================================================
+
+Global HRLC data are also used in combination with complementary global geospatial information demonstrating their capabilities of directly supporting the computation of indicators e.g. from SDG 2 [#f0]_, 6 [#f1]_, and 9 [#f2]_. 
+
+Actually, land cover is only one of the `Global Fundamental Geospatial Data Themes <https://ggim.un.org/documents/Fundamental%20Data%20Publication.pdf>`_ to SDGs identified by the United Nations. These Fundamental Themes include a variety of geospatial datasets which are necessary to spatially represent key phenomena and objects for the realization of economic, social, and environmental targets identified by the SDGs. These datasets include - among others - demography, soil/vegetation parameters, administrative boundaries, infrastructures, transport networks, 2D/3D topographic maps, water bodies, etc. 
+
+The suitability (fit-for-purpose) of `complementary global geospatial datasets <https://ggim.un.org/documents/Report_Global_and_Complementary_Geospatial_Data_for_SDGs.pdf>`_ is difficult to assess globally for each specific SDG indicator or country. Spatial and temporal resolutions, thematic details and accuracies should be evaluated case-by-case, using recommendations valid also for the global HRLC data, and their use should be functional to the provision of baseline data in support of national SDGs reporting.
+
+:numref:`2.2.1` contains information on popular global open geospatial datasets which might be employed in combination with global HRLC data for the computation of land cover-connected SDG indicators. 
+
+.. _2.2.1:
+.. table:: Selection of popular global open geospatial datasets, complementary to global HRLC data, relevant to SDG indicators computation
+
+	========================================  ==================  ==================  =============================================================================================================================================  ========================================================================================================================================
+	Global HRLC Dataset                       Temporal Coverage   Spatial Resolution   Thematic detail                                                                                                                               Notes 
+	========================================  ==================  ==================  =============================================================================================================================================  ========================================================================================================================================
+	World Bank |br| Official |br| Boundaries   Annual              /                   administrative |br| boundaries (and |br| polygons) including |br| international |br| boundaries, disputed |br| areas, coastlines, |br| lakes  -Provider: World Bank |br| -Access: |br| https://datacatalog.worldbank.org/search/dataset/0038272 |br| -CRS: WGS84 |br| -Format: vector
+	========================================  ==================  ==================  =============================================================================================================================================  ========================================================================================================================================
+
+.. |br| raw:: html
+
+	<br>
+
+.. rubric:: Footnotes
+
+.. [#f0] Radwan, T. M., Blackburn, G. A., Whyatt, J. D., & Atkinson, P. M. (2021). Global land cover trajectories and transitions. Scientific reports, 11(1), 1-16.
+.. [#f1] Ilie, C. M., Brovelli, M. A., & Coetzee, S. (2019). Monitoring SDG 9 with Global Open Data and Open Software–A Case Study from Rural Tanzania. Int. Arch. Photogramm. Remote Sens. Spatial Inf. Sci., XLII-2/W13, 1551-1558.
+.. [#f2] Mulligan, M., van Soesbergen, A., Hole, D. G., Brooks, T. M., Burke, S., & Hutton, J. (2020). Mapping nature's contribution to SDG 6 and implications for other SDGs at policy relevant scales. Remote Sensing of Environment, 239, 111671.

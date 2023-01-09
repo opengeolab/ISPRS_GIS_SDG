@@ -1,4 +1,39 @@
 .. _2.1:
 
-Global High-resolution Land Cover Datasets
+Global High-resolution Land Cover datasets
 ===========================================
+
+A notable class of key global geospatial products, which plays a major role in many SDGs, is the class of high-resolution global land cover (HRLC) maps [#f0]_. The land cover stands for all the geospatial information describing the physical and biological cover of the Earth’s surface. Land cover data products at high spatial resolution have a critical role in many scientific and policy-making applications, including climate modeling, natural resources management, landscape and biodiversity preservation, urbanization monitoring, and spatial demography. In the last two decades, the advancement of satellite land Remote Sensing as well as the availability of global coverage satellite imagery with high temporal resolution - available as free and openly-licensed data - have significantly promoted international coordination in SDGs monitoring and favored production, access and usability of global and multi-temporal HRLC data products. Accordingly, it has been assessed that currently available open and global HRLC data could potentially be exclusively used for measuring indicators from four of the SDGs (i.e. 6 Clean water and sanitation, 13 Climate action, 14 Life below water, 15 Life on land), and could be used to complement other data types for four other goals (2 Zero hunger, 9 Industry, innovation and infrastructure, 11 Sustainable cities and communities, 12 Responsible consumption and production) [#f1]_. A comprehensive list of SDG indicators to which global HRLC data as well as geospatial information in general have a direct contribution is provided `here <https://ggim.un.org/meetings/2017-4th_Mtg_IAEG-SDG-NY/documents/WG%27s_Initial_Shortlist-Table_A_B.pdf>`_.
+
+This enhanced global HRLC data availability has led to a wealth of studies, applications and methodology guidelines connected to the use of such data in SDG indicators computing and monitoring [#f2]_. Relevant examples in the literature include the analysis of land-cover efficiency [#f3]_, land consumption rate, and forest cover [#f4]_, which are key thematic variables e.g. for SDG 15 and 11. 
+
+Open and global HRLC data provide different temporal coverages, spatial resolutions, thematic details (or classes), and accuracies. Therefore, the suitability (fit-for-purpose) of global HRLC data for each specific SDG indicator has to be assessed case by case. According to the literature [#f5]_ fit-for-purpose global HRLC data should be characterized by a minimum spatial resolution of 1 km and a minimum temporal resolution of 3 to 5 years. The thematic detail is instead indicator-specific. Finally, the accuracy of global HRLC data generally varies across the globe and local validation is strongly suggested depending on study areas and the user-expected accuracy performances.
+
+Some of the most popular and mature, openly available, fit-for-purpose global HRLC datasets are reported and detailed in :numref:`2.1.1`.
+
+.. _2.1.1:
+.. table:: Selection of most popular and mature open global HRLC datasets suitable for SDG indicators computation
+
+	===================  ======================  ==================  ============================================================================================================================================================================================  ===============================================================================================================================================================================
+	Global HRLC Dataset   Temporal Coverage      Spatial Resolution  Thematic detail                             																												                                   Notes 
+	===================  ======================  ==================  ============================================================================================================================================================================================  ===============================================================================================================================================================================
+	GlobeLand30           2000, 2010, |br| 2020   30 m                10 main classes: |br| Cultivated land, Forest, |br| Grassland, Shrubland, |br| Wetland, Water bodies, |br| Tundra, Artificial |br| surfaces, Bare land and |br| Permanent snow and |br| ice  -Provider: National Geomatics Center of China |br| -Access: http://www.globeland30.org |br| (login requested) |br| -CRS: WGS84 - UTM |br| projection |br| -Format: raster
+	
+	===================  ======================  ==================  ============================================================================================================================================================================================  ===============================================================================================================================================================================
+
+.. |br| raw:: html
+
+	<br>
+
+
+
+.. rubric:: Footnotes
+
+.. [#f0] Bratic, G., Vavassori, A., and Brovelli, M. A. (2021). Review of High-Resolution Global Land Cover. Int. Arch. Photogramm. Remote Sens. Spatial Inf. Sci., XLIII-B4-2021, 175–182.
+.. [#f1] Romijn, E., Herold, M., Mora, B., Briggs, F., Seifert, F.M.,  Paganini, M. (2016). Monitoring progress towards Sustainable Development Goals The role of land monitoring. 
+.. [#f2] UN-GGIM (2021). SDGs Geospatial Roadmap. 
+.. [#f3] Estoque, R. C., Ooba, M., Togawa, T., Hijioka, Y., & Murayama, Y. (2021). Monitoring global land-use efficiency in the context of the UN 2030 Agenda for Sustainable Development. Habitat International, 115, 102403. 
+.. [#f4] Sayer, J., et al. (2019). SDG 15 Life on land–the central role of forests in sustainable development. In: Sustainable development goals: their impacts on forest and people (pp. 482-509). Cambridge University Press.
+.. [#f5] Carter, S. L., Herold, M. (2019). Specifications of land cover datasets for SDG indicator monitoring.
+
+
