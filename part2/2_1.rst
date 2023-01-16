@@ -24,27 +24,27 @@ Some of the most popular and mature, openly available, fit-for-purpose global HR
    * - GlobeLand30 
      - 2000, 2010, 2020
      - 30 m
-     - 10 main classes: Cultivated land, Forest, |br| Grassland, Shrubland, |br| Wetland, Water bodies, |br| Tundra, Artificial |br| surfaces, Bare land and |br| Permanent snow and |br| ice
-     - -Provider: National Geomatics |br| Center of China |br| -Access: |br| http://www.globeland30.org |br| (login requested) |br| -CRS: WGS84 - UTM |br| projection |br| -Format: raster
+     - 10 main classes: Cultivated land, Forest, Grassland, Shrubland, |br| Wetland, Water bodies, Tundra, Artificial surfaces, Bare land |br| and Permanent snow and ice
+     - -Provider: National Geomatics Center of China |br| -Access: http://www.globeland30.org (login requested) |br| -CRS: WGS84 - UTM projection |br| -Format: raster
    * - Finer Resolution |br| Observation |br| and Monitoring |br| of Global Land |br| Cover (FROM-GLC)
      - 2010, 2015, |br| 2017
      - 30 m
-     - 10 main classes: |br| Cropland, Forest, |br| Grass, Shrub, Wetland, |br| Water, Tundra, |br| Impervious, Bare land, |br| and Snow/Ice
-     - -Provider: University of Tsinghua |br| -Access: |br| http://data.ess.tsinghua.edu.cn |br| (login requested) |br| -CRS: WGS84 |br| -Format: raster
+     - 10 main classes: Cropland, Forest, Grass, Shrub, Wetland, |br| Water, Tundra, Impervious, Bare land, and Snow/Ice
+     - -Provider: University of Tsinghua |br| -Access: http://data.ess.tsinghua.edu.cn |br| (login requested) |br| -CRS: WGS84 |br| -Format: raster
    * - Copernicus |br| Global Land |br| Cover
      - 2015-2019 |br| (every year)
      - 100 m
-     - 10 main classes (cover |br| fractions): |br| Forests, Shrubland, |br| Herbaceous vegetation, |br| Moss & Lichen, Bare / |br| Sparse vegetation, |br| Cropland, Built-up, |br| Snow & Ice, Seasonal |br| inland water and |br| Permanent inland water. |br| 23 classes aligned with |br| UN-FAO's Land Cover |br| Classification System |br| (https://www.fao.org/3/x0596e/x0596e00.htm)
-     - -Provider: Copernicus |br| Land Monitoring |br| Service |br| -Access: |br| https://lcviewer.vito.be/about |br| (login requested) |br| -CRS: WGS84 |br| -Format: raster
+     - 10 main classes (cover fractions): Forests, Shrubland, |br| Herbaceous vegetation, Moss & Lichen, Bare / Sparse vegetation, |br| Cropland, Built-up, Snow & Ice, Seasonal |br| inland water and Permanent inland water. |br| 23 classes aligned with UN-FAO's Land Cover |br| Classification System |br| (https://www.fao.org/3/x0596e/x0596e00.htm)
+     - -Provider: Copernicus Land Monitoring Service |br| -Access: https://lcviewer.vito.be/about |br| (login requested) |br| -CRS: WGS84 |br| -Format: raster
    * - ESA-CCI-LC
      - 1992-present |br| (every year)
      - 300 m
-     - 22 classes aligned with |br| UN-FAO's Land Cover |br| Classification System
-     - -Provider: ESA Climate |br| Change Initiative |br| -Access: |br| a) https://cds.climate.copernicus.eu/cdsapp#!/dataset/satellite-land-cover?tab-form |br| (login requested) |br| b) http://maps.elie.ucl.ac.be/CCI/viewer/download.php |br| (login requested) |br| -CRS: WGS84 / Plate Carree |br| -Format: raster (NetCDF)
+     - 22 classes aligned with UN-FAO's Land Cover |br| Classification System
+     - -Provider: ESA Climate Change Initiative |br| -Access: |br| a) https://cds.climate.copernicus.eu/cdsapp#!/dataset/satellite-land-cover?tab-form |br| (login requested) |br| b) http://maps.elie.ucl.ac.be/CCI/viewer/download.php |br| (login requested) |br| -CRS: WGS84 / Plate Carree |br| -Format: raster (NetCDF)
    * - The Terra and |br| Aqua combined |br| Moderate Resolution |br| Imaging |br| Spectroradiometer |br| (MODIS) Land |br| Cover Type
      - 2001-present |br| (every year)
      - 500 m
-     - Multiple classes and |br| classification schemas |br| (https://lpdaac.usgs.gov/documents/101/MCD12_User_Guide_V6.pdf)
+     - Multiple classes and classification schemas |br| (https://lpdaac.usgs.gov/documents/101/MCD12_User_Guide_V6.pdf)
      - -Provider: United States |br| Geological Survey |br| -Access: |br| https://lpdaac.usgs.gov/products/mcd12q1v006 -CRS: MODIS |br| Sinusoidal (SR-ORG:6974) |br| -Format: raster (HDF4)
    * - Global Human |br| Settlement built-up |br| surface (GHS-BUILT-S)
      - 1975-2030 |br| (every 5 years)
@@ -54,7 +54,7 @@ Some of the most popular and mature, openly available, fit-for-purpose global HR
    * - Freshwater |br| Ecosystems |br| Explorer
      - 2000-2018
      - Up to 300 m
-     - Permanent and |br| seasonal surface water, |br| Reservoir, Wetlands, |br| Mangroves
+     - Permanent and seasonal surface water, |br| Reservoir, Wetlands, Mangroves
      - -Provider: UN Environment |br| -Access: |br| https://www.sdg661.app/downloads |br| -CRS: WGS84 |br| -Format: raster 
    
 .. |br| raw:: html
