@@ -10,13 +10,40 @@ The suitability (fit-for-purpose) of `complementary global geospatial datasets <
 :numref:`2.2.1` contains information on popular global open geospatial datasets which might be employed in combination with global HRLC data for the computation of land cover-connected SDG indicators. 
 
 .. _2.2.1:
-.. table:: Selection of popular global open geospatial datasets, complementary to global HRLC data, relevant to SDG indicators computation
+.. list-table::  Selection of popular global open geospatial datasets, complementary to global HRLC data, relevant to SDG indicators computation
+   :widths: 15 10 10 45 20
+   :header-rows: 1
 
-	========================================  ==================  ==================  =============================================================================================================================================  ========================================================================================================================================
-	Global HRLC Dataset                       Temporal Coverage   Spatial Resolution   Thematic detail                                                                                                                               Notes 
-	========================================  ==================  ==================  =============================================================================================================================================  ========================================================================================================================================
-	World Bank |br| Official |br| Boundaries   Annual              /                   administrative |br| boundaries (and |br| polygons) including |br| international |br| boundaries, disputed |br| areas, coastlines, |br| lakes  -Provider: World Bank |br| -Access: |br| https://datacatalog.worldbank.org/search/dataset/0038272 |br| -CRS: WGS84 |br| -Format: vector
-	========================================  ==================  ==================  =============================================================================================================================================  ========================================================================================================================================
+   * - Global HRLC Dataset 
+     - Temporal Coverage
+     - Spatial Resolution
+     - Thematic detail
+     - Notes
+   * - World Bank Official |br| Boundaries 
+     - Annual
+     - /
+     - Administrative boundaries (and polygons) including |br| international boundaries, disputed |br| areas, coastlines, lakes
+     - -Provider: World Bank |br| -Access: https://datacatalog.worldbank.org/search/dataset/0038272 |br| -CRS: WGS84 |br| -Format: vector
+   * - WorldPop Population Counts
+     - 2000-2020 |br| (every year)
+     - Up to 100 m |br| (3 arc seconds)
+     - Population
+     - -Provider: WorldPop - University of Southampton |br| -Access: https://hub.worldpop.org/project/categories?id=3 |br| -CRS: WGS84 |br| -Format: raster (Geotiff, ASCII XYZ)
+   * - Global Human Settlement population |br| (GHS-POP)
+     - 1975-2030 |br| (every 5 years)
+     - Up to 100 m |br| (3 arc seconds)
+     - Population
+     - -Provider: European Commission, |br| Joint Research Centre |br| -Access: https://ghsl.jrc.ec.europa.eu/download.php?ds=pop |br| -CRS: Mollweide |br| -Format: raster 
+   * - GHS Urban Centre |br| Database (GHS-UCDB)
+     - 2015, 2019
+     - 1 km |br| (30 arc seconds)
+     - Urban centers polygons
+     - -Provider: European Commission, |br| Joint Research Centre |br| -Access: https://ghsl.jrc.ec.europa.eu/download.php?ds=ucdb |br| -CRS: Mollweide |br| -Format: vector (GeoPackage)
+   * - OpenStreetMap
+     - /
+     - /
+     - Multiple (including transport networks)
+     - -Provider: OpenStreetMap |br| -Access: https://www.openstreetmap.org |br| (provider’s portal, login requested); |br| http://download.geofabrik.de; |br| https://overpass-turbo.eu (additional providers) |br| -CRS: WGS84 |br| -Format: vector
 
 .. |br| raw:: html
 
