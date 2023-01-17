@@ -18,8 +18,8 @@
 # -- Project information -----------------------------------------------------
 
 project = 'Capacity Building for GIS-based SDG Indicator Analysis with Global High-resolution Land Cover Datasets'
-copyright = '2022, GEOLab'
-author = 'Julia Anna Leonardi, Daniele Oxoli'
+copyright = '2022, Politecnico di Milano - GEOLab'
+author = 'D. Oxoli, S.R. Reyes, S. Peng with contributions from M.A. Brovelli, S. Coetzee, I. Ivanova, D. Rawal, G. Vacca, S. Zlatanova, and J.A. Leonardi'
 
 
 # -- General configuration ---------------------------------------------------
