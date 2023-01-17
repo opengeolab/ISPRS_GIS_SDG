@@ -19,7 +19,7 @@
 
 project = 'Capacity Building for GIS-based SDG Indicator Analysis with Global High-resolution Land Cover Datasets'
 copyright = '2022, Politecnico di Milano - GEOLab'
-author = 'D. Oxoli, S.R. Reyes, S. Peng\nM.A. Brovelli, S. Coetzee, I. Ivanova\nD. Rawal, G. Vacca, S. Zlatanova\nand J.A. Leonardi'
+author = 'D. Oxoli, S.R. Reyes, S. Peng\andM.A. Brovelli, S. Coetzee, I. Ivanova\andD. Rawal, G. Vacca, S. Zlatanova\andand J.A. Leonardi'
 
 
 # -- General configuration ---------------------------------------------------
