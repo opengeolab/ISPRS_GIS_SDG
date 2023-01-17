@@ -17,9 +17,9 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'ISPRSWebBook'
-copyright = '2021, GEOLab'
-author = 'Julia Anna Leonardi'
+project = 'Capacity Building for GIS-based SDG Indicator Analysis with Global High-resolution Land Cover Datasets'
+copyright = '2022, GEOLab'
+author = 'Julia Anna Leonardi, Daniele Oxoli'
 
 
 # -- General configuration ---------------------------------------------------
