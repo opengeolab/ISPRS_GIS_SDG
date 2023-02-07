@@ -1,2 +1,16 @@
-Key QGIS functionalities for SDG Indicators computation with Global HRLC Datasets
+Key QGIS functionalities for SDG Indicators computation 
 ====================================================================
+
+Work in progress...
+
+#. vector and raster import
+#. vector and raster symbology
+#. vector selections
+#. export selections in a new vector layer
+#. attribute table manipulation / field calculator / add geometry attribute 
+#. vector geoprocessing - buffer/difference/dissolve
+#. raster clip
+#. raster reclassify/calculator
+#. raster layer statistics
+#. zonal statistics
+#. raster to vector
