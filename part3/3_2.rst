@@ -1,2 +1,2 @@
-QGIS advanced (automatize processing pipeline - Graphical modeller)
+Key QGIS functionalities for SDG Indicators computation with Global HRLC Datasets
 ====================================================================
