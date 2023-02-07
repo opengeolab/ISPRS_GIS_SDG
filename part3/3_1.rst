@@ -1,2 +1,2 @@
-QGIS basics (data import, preprocessing and processing)
+QGIS
 ========================================================
