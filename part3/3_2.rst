@@ -1,4 +1,4 @@
-Key QGIS functionalities for SDG Indicators computation 
+Key QGIS functionalities for SDG indicators computation 
 ====================================================================
 
 Work in progress...
