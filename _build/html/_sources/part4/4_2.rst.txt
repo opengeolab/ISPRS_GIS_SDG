@@ -194,7 +194,8 @@ To have both the PGR and the LCR indexes in one layer, add a new field named 'PG
 	
 	Adding the PGR field into 'zonal_stats_2018' layer.
 
-Having the LCR and the PGR in the ‘zonal_stats_2018’ layer we can calculate the SDG indicator 11.3.1 in the same layer by dividing the LCR by the PGR.
+5. Having the LCR and the PGR in the ‘zonal_stats_2018’ layer we can calculate the SDG indicator 11.3.1 in the same layer by dividing the LCR by the PGR.
+
 To calculate the indicator we will use once again the field calculator as shown in :numref:`4.2.24`.
 
 .. _4.2.24:
