@@ -8,15 +8,21 @@ The land consumption rate (LCR) is defined as the rate at which urbanized land c
 For the correct calculation of the index it is also needed to agree on what constitutes a city or urban area. For this purpose we will be using the Degree of Urbanization (DEGURBA) method to delineate cities, urban and rural areas for international statistical comparisons endorsed by the United Nations Statistical Commission (https://unstats.un.org/unsd/statcom/51st-session/documents/BG-Item3j-Recommendation-E.pdf).
 For more information about the background of the SDG indicator 11.3.1 read the metadata provided under this link: https://unstats.un.org/sdgs/metadata/?Text=&Goal=11&Target=11.3 
 The workflow for computing the indicator follows 5 steps:
+
 1. Decide on the analysis period
+
 2. Delimitation of the urban area which we will analyze
+
 3. Computation of the land consumption rate
+
 4. Computation of the population growth rate
+
 5. Computation of the ratio of LCR to PGR
 
+
 1. In this exercise we will work on a one year interval from 2018 to 2019.
-2. We will use New Delhi as the analysis area. 
-Download from https://ghsl.jrc.ec.europa.eu/ghs_stat_ucdb2015mt_r2019a.php the delimitation of urban areas file as shown in (:numref:`4.2.1`).
+
+2. We will use New Delhi as the analysis area. Download from https://ghsl.jrc.ec.europa.eu/ghs_stat_ucdb2015mt_r2019a.php the delimitation of urban areas file as shown in (:numref:`4.2.1`).
 
 .. _4.2.1:
 .. figure:: /img/4.2/4.2.1.png
@@ -58,8 +64,7 @@ Change the symbology of the NewDelhi.shp layer to better visualize the delineati
 
 	Symbology of the New Delhi shapefile vector layer
 
-3. To compute the land consumption rate in the period 2018-2019 we need the urban areas data from both of the year.
-We can access the Land Cover raster data from https://lcviewer.vito.be/download. Download the indicated tile from 2018 and 2019 as shown in :numref:`4.2.7`. 
+3. To compute the land consumption rate in the period 2018-2019 we need the urban areas data from both of the year. We can access the Land Cover raster data from https://lcviewer.vito.be/download. Download the indicated tile from 2018 and 2019 as shown in :numref:`4.2.7`. 
 
 .. _4.2.7:
 .. figure:: /img/4.2/4.2.7.png
@@ -130,35 +135,71 @@ We will calculate it in a new field in the attribute table of the ‘zonal_stats
 
 	Calculaing the Land Consumption Rate.
 
-4. Having calculated the LCR, it is time to calculate the second index needed to calculate SDG 11.3.1 - the Population Growth Rate. 
-The PGR is calculated using the total population within the urban area for the analysis period using the formula below: 𝐏𝐆𝐑 = 𝐋𝐍(𝐏𝐨𝐩𝐭+𝐧/𝐏𝐨𝐩𝐭) / (𝐲), where LN is the natural logarithm value; Popt is the total population within the urban area in the initial year; Popt+n is the total population within the urban area in the final year; y is the number of years between the two measurement periods. 
-Thus, to calculate the PGR we need the population of New Delhi in 2018 and in 2019. This information can be found by downloading the ‘historical data’ from https://www.macrotrends.net/cities/21228/delhi/population (:numref:`4.2.17`). 
+4. Having calculated the LCR, it is time to calculate the second index needed to calculate SDG 11.3.1 - the Population Growth Rate.
+
+The PGR is calculated using the total population within the urban area for the analysis period using the formula below: 
+
+𝐏𝐆𝐑 = 𝐋𝐍(𝐏𝐨𝐩𝐭+𝐧/𝐏𝐨𝐩𝐭) / (𝐲), 
+
+where LN is the natural logarithm value; Popt is the total population within the urban area in the initial year; Popt+n is the total population within the urban area in the final year; y is the number of years between the two measurement periods. 
+Thus, to calculate the PGR we need the population of New Delhi in 2018 and in 2019.
+To get this information we first need to download the population layers for India in 2018 and 2019 from https://hub.worldpop.org/geodata/listing?id=29 by clicking 'Data & Resources' and then 'Download Entire Dataset' (:numref:`4.2.17`). 
 
 .. _4.2.17:
 .. figure:: /img/4.2/4.2.17.png
 
-	Downloading the population data for New Delhi
+	Downloading the population layers for India 
 
-Open the .csv file (any spreadsheet software will be good), and find the values for the years 2018 and 2019. In the spreadsheet software calculate the PGR by applying the previously mentioned formula (:numref:`4.2.18`).
+Load the population layers to the QGIS project and clip them both to New Delhi boundaries. (:numref:`4.2.18`).
 
 .. _4.2.18:
 .. figure:: /img/4.2/4.2.18.png
 
-	Calculating the PGR for the period 2018-2019
+	Clipping the population layer for the year 2018 to New Delhi's boundaries. Repeat the process for the 2019 layer.
 
-To integrate this new information in our QGIS workflow, add the PGR in the zonal statistics 2018 layer by creating a new column and copying the calculated value as shown in :numref:`4.2.19`.
+Use the ‚zonal statistics’ tool calculate the New Delhi's population in 2018 and 2019. Select only the 'sum' statistics, which will give us the population, as shown in :numref:`4.2.19`.
 
 .. _4.2.19:
 .. figure:: /img/4.2/4.2.19.png
 
-	Adding the calculated PGR in the 'zonal_stats_2018' layer
+	Calulating New Delhi's population in 2018. Repeat for the 2019 layer.
 
-Having the LCR and the PGR in the ‘zonal_stats_2018’ layer we can calculate the SDG indicator 11.3.1 in the same layer by dividing the LCR by the PGR.
-To calculate the indicator we will use once again the field calculator as shown in :numref:`4.2.20`.
+After the previous step we'll obrain two layers for both years. To make the computations easier we want to have the population field for both years in one layer.
+To do so add a new column "population_2019" to the 2018 population zonal statistics layer. Then copy the content of the "_sum" field from the 2019 population zonal statistics layer to the new created column in the 2018 layer (:numref:`4.2.20`).
 
 .. _4.2.20:
 .. figure:: /img/4.2/4.2.20.png
 
-	Calculating SDG indicator 11.3.1
+	Adding a the population of 2019 to the 2018 zonal statistics layer.
 
-For New Delhi the 11.3.1 indicator was estimated to be around 0.0293 in the 2018-2019 period.
+To change the name of a field in the attribute table go to the 'Properties' of the layer and in the 'Field' section activate the editing option (pencil icon). Now you can change the name of the '_sum' column to 'population_2018' (:numref:`4.2.21`).
+
+.. _4.2.21:
+.. figure:: /img/4.2/4.2.21.png
+
+	Changing the name of a field in a layer's attiribute table.
+
+Now that we have the population values for both years in one layer we can calculate the PGR using the 'field calculator' tool. 
+Create a new field where you'll calculate the PGR value using the before mentioned formula as shown in :numref:`4.2.22`.
+
+.. _4.2.22:
+.. figure:: /img/4.2/4.2.22.png
+	
+	Calculating the PGR index.
+
+To have both the PGR and the LCR indexes in one layer, add a new field named 'PGR' in the attribute table of the 'zonal_stats_2018' layer containing the previously calculated LCR (:numref:`4.2.23`).
+
+.. _4.2.23:
+.. figure:: /img/4.2/4.2.23.png
+	
+	Adding the PGR field into 'zonal_stats_2018' layer.
+
+Having the LCR and the PGR in the ‘zonal_stats_2018’ layer we can calculate the SDG indicator 11.3.1 in the same layer by dividing the LCR by the PGR.
+To calculate the indicator we will use once again the field calculator as shown in :numref:`4.2.24`.
+
+.. _4.2.24:
+.. figure:: /img/4.2/4.2.24.png
+	
+	Calculating the SDG indicator 11.3.1.
+
+For New Delhi the 11.3.1 indicator was estimated to be around 0.0387 in the 2018-2019 period.

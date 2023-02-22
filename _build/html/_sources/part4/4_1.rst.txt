@@ -58,7 +58,7 @@ After downloading the file, add it to the project by using the ‘Add Raster Lay
 
 	Adding the forest raster data layer to the project
 
-After adding the downloaded vector and the raster layer, the view of your project should be similar to the one shown in :numref:`7.1.8`.
+After adding the downloaded vector and the raster layer, the view of your project should be similar to the one shown in :numref:`4.1.8`.
 
 .. _4.1.8:
 .. figure:: /img/4.1/4.1.8.png
