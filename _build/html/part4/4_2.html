@@ -331,26 +331,26 @@ To get this information we first need to download the population layers for Indi
 <p><span class="caption-number">Fig. 4.2.18 </span><span class="caption-text">Clipping the population layer for the year 2018 to New Delhi’s boundaries. Repeat the process for the 2019 layer.</span><a class="headerlink" href="#id42" title="Permalink to this image">¶</a></p>
 </figcaption>
 </figure>
-<p>Use the ‚zonal statistics’ tool calculate the New Delhi’s population in 2018 and 2019. Select only the ‘sum’ statistics, which will give us the population, as shown in <a class="reference internal" href="#id19"><span class="std std-numref">Fig. 4.2.19</span></a>.</p>
+<p>Use the ‚zonal statistics’ tool to calculate New Delhi’s population in 2018 and 2019. Select only the ‘sum’ statistics, which will give us the population, as shown in <a class="reference internal" href="#id19"><span class="std std-numref">Fig. 4.2.19</span></a>.</p>
 <figure class="align-default" id="id43">
 <span id="id19"></span><img alt="../_images/4.2.19.png" src="../_images/4.2.19.png" />
 <figcaption>
 <p><span class="caption-number">Fig. 4.2.19 </span><span class="caption-text">Calulating New Delhi’s population in 2018. Repeat for the 2019 layer.</span><a class="headerlink" href="#id43" title="Permalink to this image">¶</a></p>
 </figcaption>
 </figure>
-<p>After the previous step we’ll obrain two layers for both years. To make the computations easier we want to have the population field for both years in one layer.
-To do so add a new column “population_2019” to the 2018 population zonal statistics layer. Then copy the content of the “_sum” field from the 2019 population zonal statistics layer to the new created column in the 2018 layer (<a class="reference internal" href="#id20"><span class="std std-numref">Fig. 4.2.20</span></a>).</p>
+<p>After the previous step we’ll obtain two layers for both years. To make the computations easier we want to have the population field for both years in one layer.
+To do so add a new column “population_2019” to the 2018 population zonal statistics layer. Then copy the content of the “_sum” field from the 2019 population zonal statistics layer to the newly created column in the 2018 layer (<a class="reference internal" href="#id20"><span class="std std-numref">Fig. 4.2.20</span></a>).</p>
 <figure class="align-default" id="id44">
 <span id="id20"></span><img alt="../_images/4.2.20.png" src="../_images/4.2.20.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 4.2.20 </span><span class="caption-text">Adding a the population of 2019 to the 2018 zonal statistics layer.</span><a class="headerlink" href="#id44" title="Permalink to this image">¶</a></p>
+<p><span class="caption-number">Fig. 4.2.20 </span><span class="caption-text">Adding the population of 2019 to the 2018 zonal statistics layer.</span><a class="headerlink" href="#id44" title="Permalink to this image">¶</a></p>
 </figcaption>
 </figure>
 <p>To change the name of a field in the attribute table go to the ‘Properties’ of the layer and in the ‘Field’ section activate the editing option (pencil icon). Now you can change the name of the ‘_sum’ column to ‘population_2018’ (<a class="reference internal" href="#id21"><span class="std std-numref">Fig. 4.2.21</span></a>).</p>
 <figure class="align-default" id="id45">
 <span id="id21"></span><img alt="../_images/4.2.21.png" src="../_images/4.2.21.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 4.2.21 </span><span class="caption-text">Changing the name of a field in a layer’s attiribute table.</span><a class="headerlink" href="#id45" title="Permalink to this image">¶</a></p>
+<p><span class="caption-number">Fig. 4.2.21 </span><span class="caption-text">Changing the name of a field in a layer’s attribute table.</span><a class="headerlink" href="#id45" title="Permalink to this image">¶</a></p>
 </figcaption>
 </figure>
 <p>Now that we have the population values for both years in one layer we can calculate the PGR using the ‘field calculator’ tool.
@@ -365,7 +365,7 @@ Create a new field where you’ll calculate the PGR value using the before menti
 <figure class="align-default" id="id47">
 <span id="id23"></span><img alt="../_images/4.2.23.png" src="../_images/4.2.23.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 4.2.23 </span><span class="caption-text">Adding the PGR field into ‘zonal_stats_2018’ layer.</span><a class="headerlink" href="#id47" title="Permalink to this image">¶</a></p>
+<p><span class="caption-number">Fig. 4.2.23 </span><span class="caption-text">Adding the PGR field into the ‘zonal_stats_2018’ layer.</span><a class="headerlink" href="#id47" title="Permalink to this image">¶</a></p>
 </figcaption>
 </figure>
 <ol class="arabic simple" start="5">

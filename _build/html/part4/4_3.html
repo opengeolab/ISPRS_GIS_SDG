@@ -179,6 +179,241 @@
             
   <section id="proportion-of-the-rural-population-who-live-within-2-km-of-an-all-season-road-9-1-1">
 <h1><span class="section-number">4.3. </span>Proportion of the rural population who live within 2 km of an all-season road [9.1.1]<a class="headerlink" href="#proportion-of-the-rural-population-who-live-within-2-km-of-an-all-season-road-9-1-1" title="Permalink to this heading">¶</a></h1>
+<p>This exercise’s purpose is to show how to compute the SDG indicator 9.1.1 defined as the share of a country’s rural population living within 2 km of an all-season road. This indicator is also commonly known as the Rural Access Index (RAI). To calculate the indicator it is needed to compute the ratio between the rural population within a 2 km buffer of an all-season road and the total rural population of the country.
+To compute this indicator we need three different geospatial datasets:</p>
+<ul>
+<li><p>The country’s population distribution, that can be retrieved from WorldPop (<a class="reference external" href="https://hub.worldpop.org/">https://hub.worldpop.org/</a>);</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>From which it is necessary to extract only the rural population, which can be done using a Rural-Urban global definition provided by the Global Human Settlement Layer (<a class="reference external" href="https://ghsl.jrc.ec.europa.eu/ghs_stat_ucdb2015mt_r2019a.php">https://ghsl.jrc.ec.europa.eu/ghs_stat_ucdb2015mt_r2019a.php</a>);</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>The distribution of the road network, which can be accessed for all countries from OpenStreetMap (<a class="reference external" href="http://www.openstreetmap.org/">http://www.openstreetmap.org/</a>);</p></li>
+<li><p>The passability of the roads, which also can be found in the OpenStreetMap data.</p></li>
+</ul>
+<p>For more information about the background of the SDG indicator 9.1.1 refer to the metadata provided under this link: <a class="reference external" href="https://unstats.un.org/sdgs/metadata/?Text=&amp;Goal=9&amp;Target=9.1">https://unstats.un.org/sdgs/metadata/?Text=&amp;Goal=9&amp;Target=9.1</a></p>
+<p>In this exercise we will calculate the indicator for Gabon in 2020.</p>
+<p>First, we need to download all the necessary data:</p>
+<ul>
+<li><p>From <a class="reference external" href="https://hub.worldpop.org/geodata/listing?id=78">https://hub.worldpop.org/geodata/listing?id=78</a> download the population raster layer for Gabon in 2020 as shown in <a class="reference internal" href="#id1"><span class="std std-numref">Fig. 4.3.1</span></a>.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>From <a class="reference external" href="https://ghsl.jrc.ec.europa.eu/ghs_stat_ucdb2015mt_r2019a.php">https://ghsl.jrc.ec.europa.eu/ghs_stat_ucdb2015mt_r2019a.php</a> download the Urban Centre Database (<a class="reference internal" href="#id2"><span class="std std-numref">Fig. 4.3.2</span></a>)</p></li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+<figure class="align-default" id="id30">
+<span id="id1"></span><img alt="../_images/4.3.1.png" src="../_images/4.3.1.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 4.3.1 </span><span class="caption-text">Downloading the population raster layer of Gabon 2020</span><a class="headerlink" href="#id30" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="id31">
+<span id="id2"></span><img alt="../_images/4.3.2.png" src="../_images/4.3.2.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 4.3.2 </span><span class="caption-text">Downloading the delimitation of urban areas file</span><a class="headerlink" href="#id31" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<ul class="simple">
+<li><p>From <a class="reference external" href="https://download.geofabrik.de/africa/gabon.html">https://download.geofabrik.de/africa/gabon.html</a> download the OSM data. After that unpack the .zip file and keep only the files related to the road network (‘gis_osm_roads_free’). The procedure is shown in <a class="reference internal" href="#id3"><span class="std std-numref">Fig. 4.3.3</span></a></p></li>
+</ul>
+<figure class="align-default" id="id32">
+<span id="id3"></span><img alt="../_images/4.3.3.png" src="../_images/4.3.3.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 4.3.3 </span><span class="caption-text">Downloading the road network data from OSM.</span><a class="headerlink" href="#id32" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<p>Open a new QGIS project and add the downloaded population grid file (<a class="reference internal" href="#id4"><span class="std std-numref">Fig. 4.3.4</span></a>) and the road network shapefile (<a class="reference internal" href="#id5"><span class="std std-numref">Fig. 4.3.5</span></a>).</p>
+<figure class="align-default" id="id33">
+<span id="id4"></span><img alt="../_images/4.3.4.png" src="../_images/4.3.4.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 4.3.4 </span><span class="caption-text">Adding the Gabon population raster layer to the QGIS project</span><a class="headerlink" href="#id33" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="id34">
+<span id="id5"></span><img alt="../_images/4.3.5.png" src="../_images/4.3.5.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 4.3.5 </span><span class="caption-text">Adding the vector layer of he Gabon road network to he QGIS project</span><a class="headerlink" href="#id34" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<p>Since we are interested only in all-season, major roads we need to extract only those from the shapefile vector layer. The information about the codes for the roads from the “Format Specification” for OSM data (<a class="reference internal" href="#id6"><span class="std std-numref">Fig. 4.3.6</span></a>) indicates that the major roads have codes starting with 511.</p>
+<figure class="align-default" id="id35">
+<span id="id6"></span><img alt="../_images/4.3.6.png" src="../_images/4.3.6.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 4.3.6 </span><span class="caption-text">“Format Specification” regarding OSM roads’ codes</span><a class="headerlink" href="#id35" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<p>Using the selection by expression, we can select the roads with codes that are smaller than 5120 as shown in <a class="reference internal" href="#id7"><span class="std std-numref">Fig. 4.3.7</span></a>. After the selection of major roads we want to export them in a new vector layer that will be called ‘all_season_roads.shp’’.</p>
+<figure class="align-default" id="id36">
+<span id="id7"></span><img alt="../_images/4.3.7.png" src="../_images/4.3.7.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 4.3.7 </span><span class="caption-text">Selecting major roads in Gabon</span><a class="headerlink" href="#id36" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<p>The procedure of extracting selected features is presented in <a class="reference internal" href="#id8"><span class="std std-numref">Fig. 4.3.8</span></a>, and the expected view after the procedure is shown in <a class="reference internal" href="#id9"><span class="std std-numref">Fig. 4.3.9</span></a>.</p>
+<figure class="align-default" id="id37">
+<span id="id8"></span><img alt="../_images/4.3.8.png" src="../_images/4.3.8.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 4.3.8 </span><span class="caption-text">Extracting the selected features</span><a class="headerlink" href="#id37" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="id38">
+<span id="id9"></span><img alt="../_images/4.3.9.png" src="../_images/4.3.9.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 4.3.9 </span><span class="caption-text">Expected view after extracting only Gabon’s major roads.</span><a class="headerlink" href="#id38" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<p>We now need to create the 2 km buffer around the major roads, by using the ‘Buffer’ geoprocessing tool (<a class="reference internal" href="#id10"><span class="std std-numref">Fig. 4.3.10</span></a>). Because of reprojecting issues that may be encountered we input the distance in degrees.</p>
+<figure class="align-default" id="id39">
+<span id="id10"></span><img alt="../_images/4.3.10.png" src="../_images/4.3.10.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 4.3.10 </span><span class="caption-text">Creating a 2 km buffer around the major roads</span><a class="headerlink" href="#id39" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<p>Now we have the buffer around the major roads and the population grid of Gabon. We want to extract just the rural population within that buffer, hence we need to exclude the urban areas from the computations. To do so add the urban extent layer previously downloaded (<a class="reference internal" href="#id11"><span class="std std-numref">Fig. 4.3.11</span></a>) and compute the difference between the previously created road buffer and the urban extent layer (<a class="reference internal" href="#id12"><span class="std std-numref">Fig. 4.3.12</span></a>). This will create a new vector layer containing the buffer only in rural areas.</p>
+<figure class="align-default" id="id40">
+<span id="id11"></span><img alt="../_images/4.3.11.png" src="../_images/4.3.11.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 4.3.11 </span><span class="caption-text">Adding the urban extent vector layer to the QGIS project</span><a class="headerlink" href="#id40" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="id41">
+<span id="id12"></span><img alt="../_images/4.3.12.png" src="../_images/4.3.12.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 4.3.12 </span><span class="caption-text">Subtracting the urban extent layer from the road buffer layer</span><a class="headerlink" href="#id41" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>In case of “invalid geometry” error: click the wrench icon by the side of the overlay layer and select “Do not Filter (Better Performance)” from the drop down menu in the “Invalid feature filtering” option.</p>
+</div>
+<p>Having this vector layer and the population grid layer we will use them as input layers to calculate the rural population within the 2 km buffer of a major road by using the “zonal statistics” tool. Choose only the “Sum” zonal statistic, as it’s the only one we are interested in (<a class="reference internal" href="#id13"><span class="std std-numref">Fig. 4.3.13</span></a>).</p>
+<figure class="align-default" id="id42">
+<span id="id13"></span><img alt="../_images/4.3.13.png" src="../_images/4.3.13.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 4.3.13 </span><span class="caption-text">Calculating the rural population within the 2 km buffer around major roads.</span><a class="headerlink" href="#id42" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<p>After this step we have the rural population within a 2 km buffer of a major road (<a class="reference internal" href="#id14"><span class="std std-numref">Fig. 4.3.14</span></a>).</p>
+<figure class="align-default" id="id43">
+<span id="id14"></span><img alt="../_images/4.3.14.png" src="../_images/4.3.14.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 4.3.14 </span><span class="caption-text">Restult of the “zonal statistics” operation</span><a class="headerlink" href="#id43" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<p>To calculate the indicator 9.1.1 we also need the total rural population of Gabon, which we will calculate in the next steps.
+Firstly we need Gabon’s boundaries to delimitate the urban extent layer ust to our area of interest. To retrieve this data go to <a class="reference external" href="https://datacatalog.worldbank.org/search/dataset/0038272">https://datacatalog.worldbank.org/search/dataset/0038272</a> and download the ‘World Country Polygons - Very High Definition’ as shown in <a class="reference internal" href="#id15"><span class="std std-numref">Fig. 4.3.15</span></a>.</p>
+<figure class="align-default" id="id44">
+<span id="id15"></span><img alt="../_images/4.3.15.png" src="../_images/4.3.15.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 4.3.15 </span><span class="caption-text">Downloading the ‘World Country Polygons’</span><a class="headerlink" href="#id44" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<p>Add the downloaded shapefile to the QGIS project (<a class="reference internal" href="#id16"><span class="std std-numref">Fig. 4.3.16</span></a>).</p>
+<figure class="align-default" id="id45">
+<span id="id16"></span><img alt="../_images/4.3.16.png" src="../_images/4.3.16.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 4.3.16 </span><span class="caption-text">Adding the countries’ boundaries vector layer to the QGIS project</span><a class="headerlink" href="#id45" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<p>Since we are interested only in the boundaries of Gabon we need to extract them from the vector file. To do so select Gabon’s polygon by area as presented in <a class="reference internal" href="#id17"><span class="std std-numref">Fig. 4.3.17</span></a>.</p>
+<figure class="align-default" id="id46">
+<span id="id17"></span><img alt="../_images/4.3.17.png" src="../_images/4.3.17.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 4.3.17 </span><span class="caption-text">Selecting Gabon by area</span><a class="headerlink" href="#id46" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<p>Now extract the selected feature to a new vector layer ‘Gabon.shp’ (<a class="reference internal" href="#id18"><span class="std std-numref">Fig. 4.3.18</span></a>).</p>
+<figure class="align-default" id="id47">
+<span id="id18"></span><img alt="../_images/4.3.18.png" src="../_images/4.3.18.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 4.3.18 </span><span class="caption-text">Extracting the selected Gabon polygon</span><a class="headerlink" href="#id47" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<p>For better visualization purposes change the symbology of the new layer in its Properties, which can be accessed by right clicking the layer in the layers pane. An example of a clear symbology for a country’s boundaries is presented in <a class="reference internal" href="#id19"><span class="std std-numref">Fig. 4.3.19</span></a>.</p>
+<figure class="align-default" id="id48">
+<span id="id19"></span><img alt="../_images/4.3.19.png" src="../_images/4.3.19.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 4.3.19 </span><span class="caption-text">Changing the “Gabon.shp” symbology</span><a class="headerlink" href="#id48" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<p>Now we can clip the urban extent layer to Gabon’s borders by using the “Clip” geoprocessing tool (<a class="reference internal" href="#id20"><span class="std std-numref">Fig. 4.3.20</span></a>).</p>
+<figure class="align-default" id="id49">
+<span id="id20"></span><img alt="../_images/4.3.20.png" src="../_images/4.3.20.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 4.3.20 </span><span class="caption-text">Clipping the urban extent layer to Gabon’s extent</span><a class="headerlink" href="#id49" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<p>The urban extent polygons are now limited only to Gabon’s extent. If we open the attribute table now, we can see that for each urban area there’s a distinct row. Since we are interested in the urban areas as a whole we want to have just one record for all the urban areas in Gabon. To do so we need to use the “Dissolve” geoprocessing tool as shown in <a class="reference internal" href="#id21"><span class="std std-numref">Fig. 4.3.21</span></a>.</p>
+<figure class="align-default" id="id50">
+<span id="id21"></span><img alt="../_images/4.3.21.png" src="../_images/4.3.21.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 4.3.21 </span><span class="caption-text">Dissolving the urban extent layer</span><a class="headerlink" href="#id50" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<p>The attribute table of the Gabon’s urban extent layer after this operation can be found in <a class="reference internal" href="#id22"><span class="std std-numref">Fig. 4.3.22</span></a>.</p>
+<figure class="align-default" id="id51">
+<span id="id22"></span><img alt="../_images/4.3.22.png" src="../_images/4.3.22.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 4.3.22 </span><span class="caption-text">The expected result of the “Dissolve” procedure</span><a class="headerlink" href="#id51" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<p>We can now easily calculate the total urban population with “zonal statistics”, in the newly created vector layer the “_sum” field presents the total urban population of Gabon (<a class="reference internal" href="#id23"><span class="std std-numref">Fig. 4.3.23</span></a>).</p>
+<figure class="align-default" id="id52">
+<span id="id23"></span><img alt="../_images/4.3.23.png" src="../_images/4.3.23.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 4.3.23 </span><span class="caption-text">Calculating the total urban population of Gabon</span><a class="headerlink" href="#id52" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<p>To calculate the needed rural population of Gabon it is needed to first retrieve the total population, so then we can compute:
+<strong>rural pop = total pop - urban pop</strong>;
+To calculate from the population grid the total population we will use the “Raster layer statistics” with the population raster layer as input. The output of this process is stored in a temporary .html file which you can find in the right bottom corner of your screen in the “Result Viewer” panel (<a class="reference internal" href="#id24"><span class="std std-numref">Fig. 4.3.24</span></a>).</p>
+<figure class="align-default" id="id53">
+<span id="id24"></span><img alt="../_images/4.3.24.png" src="../_images/4.3.24.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 4.3.24 </span><span class="caption-text">Calculating the total population of Gabon in 2020 with the “Raster layer statistics”</span><a class="headerlink" href="#id53" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<p>We now have all the necessary data to calculate the indicator. To make the computations easier and faster we first need to add all the needed values into one layer.
+Open the attribute table of the “zonal_stats_buffer.shp” layer, which we previously created to calculate the rural population within the 2 km buffer. Start editing and add two new integer fields, one for the total population and the second for the urban population (<a class="reference internal" href="#id25"><span class="std std-numref">Fig. 4.3.25</span></a>).</p>
+<figure class="align-default" id="id54">
+<span id="id25"></span><img alt="../_images/4.3.25.png" src="../_images/4.3.25.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 4.3.25 </span><span class="caption-text">Adding new fields to the attribute table of “zonal_stats_buffer.shp”</span><a class="headerlink" href="#id54" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<p>To the “total_pop” field paste the value of the “Sum” from the .html file generated by the “Raster layer statistics” tool (<a class="reference internal" href="#id26"><span class="std std-numref">Fig. 4.3.26</span></a>).</p>
+<figure class="align-default" id="id55">
+<span id="id26"></span><img alt="../_images/4.3.26.png" src="../_images/4.3.26.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 4.3.26 </span><span class="caption-text">Populating the “total_pop” field</span><a class="headerlink" href="#id55" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<p>To the “urban_pop” paste the value of the “_sum” field from the attribute table of the “urban_zonal_stats.shp” layer (<a class="reference internal" href="#id27"><span class="std std-numref">Fig. 4.3.27</span></a>).</p>
+<figure class="align-default" id="id56">
+<span id="id27"></span><img alt="../_images/4.3.27.png" src="../_images/4.3.27.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 4.3.27 </span><span class="caption-text">Populating the “urban_pop” field</span><a class="headerlink" href="#id56" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<p>Finally, we can calculate the SDG 9.1.1 indicator using the field calculator. Since the indicator is defined as:
+<strong>(rural population living in a 2 km buffer from a major road) / (total rural population)</strong>
+we can compute it as shown in <a class="reference internal" href="#id28"><span class="std std-numref">Fig. 4.3.28</span></a>.</p>
+<figure class="align-default" id="id57">
+<span id="id28"></span><img alt="../_images/4.3.28.png" src="../_images/4.3.28.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 4.3.28 </span><span class="caption-text">Calculating of the SDG 9.1.1 indicator</span><a class="headerlink" href="#id57" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<p>The final result (<a class="reference internal" href="#id29"><span class="std std-numref">Fig. 4.3.29</span></a>) indicated that around <strong>71% of Gabon’s total rural population lives in a 2 km buffer from a major, all-season road.</strong></p>
+<figure class="align-default" id="id58">
+<span id="id29"></span><img alt="../_images/4.3.29.png" src="../_images/4.3.29.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 4.3.29 </span><span class="caption-text">The attribute table with the final result</span><a class="headerlink" href="#id58" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
 </section>
 
 

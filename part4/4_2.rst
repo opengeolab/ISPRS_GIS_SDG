@@ -157,27 +157,27 @@ Load the population layers to the QGIS project and clip them both to New Delhi b
 
 	Clipping the population layer for the year 2018 to New Delhi's boundaries. Repeat the process for the 2019 layer.
 
-Use the ‚zonal statistics’ tool calculate the New Delhi's population in 2018 and 2019. Select only the 'sum' statistics, which will give us the population, as shown in :numref:`4.2.19`.
+Use the ‚zonal statistics’ tool to calculate New Delhi's population in 2018 and 2019. Select only the 'sum' statistics, which will give us the population, as shown in :numref:`4.2.19`.
 
 .. _4.2.19:
 .. figure:: /img/4.2/4.2.19.png
 
 	Calulating New Delhi's population in 2018. Repeat for the 2019 layer.
 
-After the previous step we'll obrain two layers for both years. To make the computations easier we want to have the population field for both years in one layer.
-To do so add a new column "population_2019" to the 2018 population zonal statistics layer. Then copy the content of the "_sum" field from the 2019 population zonal statistics layer to the new created column in the 2018 layer (:numref:`4.2.20`).
+After the previous step we'll obtain two layers for both years. To make the computations easier we want to have the population field for both years in one layer.
+To do so add a new column "population_2019" to the 2018 population zonal statistics layer. Then copy the content of the "_sum" field from the 2019 population zonal statistics layer to the newly created column in the 2018 layer (:numref:`4.2.20`).
 
 .. _4.2.20:
 .. figure:: /img/4.2/4.2.20.png
 
-	Adding a the population of 2019 to the 2018 zonal statistics layer.
+	Adding the population of 2019 to the 2018 zonal statistics layer.
 
 To change the name of a field in the attribute table go to the 'Properties' of the layer and in the 'Field' section activate the editing option (pencil icon). Now you can change the name of the '_sum' column to 'population_2018' (:numref:`4.2.21`).
 
 .. _4.2.21:
 .. figure:: /img/4.2/4.2.21.png
 
-	Changing the name of a field in a layer's attiribute table.
+	Changing the name of a field in a layer's attribute table.
 
 Now that we have the population values for both years in one layer we can calculate the PGR using the 'field calculator' tool. 
 Create a new field where you'll calculate the PGR value using the before mentioned formula as shown in :numref:`4.2.22`.
@@ -192,7 +192,7 @@ To have both the PGR and the LCR indexes in one layer, add a new field named 'PG
 .. _4.2.23:
 .. figure:: /img/4.2/4.2.23.png
 	
-	Adding the PGR field into 'zonal_stats_2018' layer.
+	Adding the PGR field into the 'zonal_stats_2018' layer.
 
 5. Having the LCR and the PGR in the ‘zonal_stats_2018’ layer we can calculate the SDG indicator 11.3.1 in the same layer by dividing the LCR by the PGR.
 
