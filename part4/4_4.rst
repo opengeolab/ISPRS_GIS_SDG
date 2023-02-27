@@ -22,31 +22,31 @@ In this exercise we will focus on the water-related ecosystems in Egypt in a fiv
 
 To calculate this change index we need first to download the data for:
 
-- Coutries border delimitation from https://datacatalog.worldbank.org/search/dataset/0038272 (Figure 4.4.1)
+- Coutries border delimitation from https://datacatalog.worldbank.org/search/dataset/0038272 (:numref:`4.4.1`)
 
 .. _4.4.1:
 .. figure:: /img/4.4/4.4.1.png
 
 	Downloading the coutries borders layer 
 
-- Egypt’s water surfaces from “Freshwater Ecosystems Explorer” https://www.sdg661.app/downloads for the years 2014 and 2018 (Figure 4.4.2), in which we can find a layer with one band with three possible values: (1 - Not Water; 2 - Seasonal Water; 3 - Permanent Water). After downloading the file remember to unpack it before working on it.
+- Egypt’s water surfaces from “Freshwater Ecosystems Explorer” https://www.sdg661.app/downloads for the years 2014 and 2018 (:numref:`4.4.2`), in which we can find a layer with one band with three possible values: (1 - Not Water; 2 - Seasonal Water; 3 - Permanent Water). After downloading the file remember to unpack it before working on it.
 
 .. _4.4.2:
 .. figure:: /img/4.4/4.4.2.png
 
 	Downloading the Egypt's water surfaces layers 
 
-Open a new QGIS project and add the countries borders vector layer to it as in Figure 4.4.3.
+Open a new QGIS project and add the countries borders vector layer to it as in :numref:`4.4.3`.
 
 .. _4.4.3:
 .. figure:: /img/4.4/4.4.3.png
 
 	Adding the vector layer to the QGIS project
 
-Since we are interested only in Egypt’s water areas, we need to extract its polygon by first selecting it (Figure 4.4.4) and then extracting the selected features and saving them in a new layer (Figure 4.4.5).
+Since we are interested only in Egypt’s water areas, we need to extract its polygon by first selecting it (:numref:`4.4.4`) and then extracting the selected features and saving them in a new layer (:numref:`4.4.5`).
 
 .. _4.4.4:
-.. figure:: /img/4.4/4.4.5.png
+.. figure:: /img/4.4/4.4.4.png
  
 	Selecting Egypt's polygon
 
@@ -55,21 +55,21 @@ Since we are interested only in Egypt’s water areas, we need to extract its po
 
 	Extracting the selected polygon as a new layer
 
-For better visualization purposes change the symbology on the newly added Egypt layer as portrayed in Figure 4.4.6.
+For better visualization purposes change the symbology on the newly added Egypt layer as portrayed in :numref:`4.4.6`.
 
 .. _4.4.6:
 .. figure:: /img/4.4/4.4.6.png
 
 	Changing the symbology of the Egypt.shp layer
 
-Now that we have defined the Area Of Interest (AOI) in our project we can add the water extent data (Figure 4.4.7).
+Now that we have defined the Area Of Interest (AOI) in our project we can add the water extent data (:numref:`4.4.7`).
 
 .. _4.4.7:
 .. figure:: /img/4.4/4.4.7.png
 
 	Adding the raster layer of the water extent of Egypt in 2018. Repeat for the 2014 layer.
 
-As mentioned before each year's file has three possible values as specified in Figure 4.4.8, so we want to represent these classes by changing the symbology of both layers. A proposed symbology for the 2018 layer is presented in Figure 4.4.9. Make sure to apply the symbology change to both layers with the same palette.
+As mentioned before each year's file has three possible values as specified in :numref:`4.4.8`, so we want to represent these classes by changing the symbology of both layers. A proposed symbology for the 2018 layer is presented in :numref:`4.4.9`. Make sure to apply the symbology change to both layers with the same palette.
 
 .. _4.4.8:
 .. figure:: /img/4.4/4.4.8.png
@@ -81,63 +81,63 @@ As mentioned before each year's file has three possible values as specified in F
 
 	Changing the symbology of the water extent layers for better visualization purposes 	
 
-After adding and changing the symbology of both needed datasets the desired view of the project should be as shown in Figure 4.4.10.
+After adding and changing the symbology of both needed datasets the desired view of the project should be as shown in :numref:`4.4.10`.
 
 .. _4.4.10:
 .. figure:: /img/4.4/4.4.10.png
 
 	The desired view after adding and changing the symbology of the data
 
-Now we need to extract from the two raster layers the components α, β, ρ, σ, ε to calculate the change index as defined in Figure 4.4.11. 
+Now we need to extract from the two raster layers the components α, β, ρ, σ, ε to calculate the change index as defined in :numref:`4.4.11`. 
 
 .. _4.4.11:
 .. figure:: /img/4.4/4.4.11.png
 
 	The formula of the index to be calculated in this exercise 	
 
-To do so we will use the ‘Raster calculator’ to create a new raster layer with new values (α, β, ρ, σ, ε) by applying a reclassification scheme presented in Figure 4.4.12, remembering that the values of the rasters are: 1 - Not Water; 2 - Seasonal Water; 3 - Permanent Water (so the expression “Egypt_classes_2014@1 = 1 AND Egypt_classes_2018@1 = 3” represents the change from a no water place to a water place, which corresponds to α in the equation defined above). After clicking “Run” the process may take a while to complete. 
+To do so we will use the ‘Raster calculator’ to create a new raster layer with new values (α, β, ρ, σ, ε) by applying a reclassification scheme presented in :numref:`4.4.12`, remembering that the values of the rasters are: 1 - Not Water; 2 - Seasonal Water; 3 - Permanent Water (so the expression “Egypt_classes_2014@1 = 1 AND Egypt_classes_2018@1 = 3” represents the change from a no water place to a water place, which corresponds to α in the equation defined above). After clicking “Run” the process may take a while to complete. 
 
 .. _4.4.12:
 .. figure:: /img/4.4/4.4.12.png
 
 	 	Creating a new raster layer with reclassified values according to the needed information for the index calculation
 
-After the process is done the values of the new raster layer will be: 1 → α; 2 → β; 3 → ρ; 4 → σ; 5 → ε. For better visualization change the symbology of the new raster as shown in Figure 4.3.13.
+After the process is done the values of the new raster layer will be: 1 → α; 2 → β; 3 → ρ; 4 → σ; 5 → ε. For better visualization change the symbology of the new raster as shown in :numref:`4.4.13`.
 
 .. _4.4.13:
 .. figure:: /img/4.4/4.4.13.png
 
 	Changing the symbology of the new raster 
 
-Now that we have a raster showing the changes in permanent water extent we want to know what is their area. To do so we chose the approach of vectorizing the transformation layer for easier computations later on. The process of transforming tre transformation raster layer into a vector layer is heavy and will take a considerable amount of time **(YOU CAN DOWNLOAD THE ALREADY VECTORIZED LAYER FROM…)**. To compute the vector layer we use the “Polygonize (Raster to Vector)” tool from the conversion raster tools (Figure 4.4.14). 
+Now that we have a raster showing the changes in permanent water extent we want to know what is their area. To do so we chose the approach of vectorizing the transformation layer for easier computations later on. The process of transforming tre transformation raster layer into a vector layer is heavy and will take a considerable amount of time **(YOU CAN DOWNLOAD THE ALREADY VECTORIZED LAYER FROM…)**. To compute the vector layer we use the “Polygonize (Raster to Vector)” tool from the conversion raster tools (:numref:`4.4.14`). 
 
 .. _4.4.14:
 .. figure:: /img/4.4/4.4.14.png
 
 	Polygonizing the transformation raster 
 
-This vector layer also contains land features that we are not interested in, hence we will extract all the features with values not equal to 0. This will be done by first selecting all such features by expression and then exporting the selected features to a new layer. The workflow is presented in Figure 4.4.15. 
+This vector layer also contains land features that we are not interested in, hence we will extract all the features with values not equal to 0. This will be done by first selecting all such features by expression and then exporting the selected features to a new layer. The workflow is presented in :numref:`4.4.15`. 
 
 .. _4.4.15:
 .. figure:: /img/4.4/4.4.15.png
 
 	Extracting only the information about water areas from the vector 
 
-The layer’s attribute table contains all the polygons as separate. We want to group them by their classification so that the attribute table will contain just five classes representing the component of the final equation. To do that we will use the “Dissolve” geoprocessing tool. It is important to remember what is the field that we are dissolving and set it in the optional settings of the process. The procedure is presented in Figure 4.4.16.
+The layer’s attribute table contains all the polygons as separate. We want to group them by their classification so that the attribute table will contain just five classes representing the component of the final equation. To do that we will use the “Dissolve” geoprocessing tool. It is important to remember what is the field that we are dissolving and set it in the optional settings of the process. The procedure is presented in :numref:`4.4.16`.
 
 .. _4.4.16:
 .. figure:: /img/4.4/4.4.16.png
 
 	Dissolving the features of the vector according to the class field (DN)
 
-Now that we have all of our component’s classes grouped we can calculate each class’ area to have the final values for the computation. We will use the “Add Geometry Attributes” vector geometry tool using as input the dissolved transformation vector containing water information. The ellipsoidal parameter should be set in the calculation parameter (Figure 4.4.17). 
+Now that we have all of our component’s classes grouped we can calculate each class’ area to have the final values for the computation. We will use the “Add Geometry Attributes” vector geometry tool using as input the dissolved transformation vector containing water information. The ellipsoidal parameter should be set in the calculation parameter (:numref:`4.4.17`). 
 
 .. _4.4.17:
 .. figure:: /img/4.4/4.4.17.png
 
 	Adding geometry attributes to the vector layer
 
-The output vector layer will now contain the area for each type of water transformation (Figure 4.4.18).
+The output vector layer will now contain the area for each type of water transformation (:numref:`4.4.18`).
 
 .. _4.4.18:
 .. figure:: /img/4.4/4.4.18.png
