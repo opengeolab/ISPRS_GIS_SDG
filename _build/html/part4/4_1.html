@@ -181,11 +181,12 @@
   <section id="forest-area-as-a-proportion-of-total-land-area-15-1-1">
 <h1><span class="section-number">4.1. </span>Forest area as a proportion of total land area [15.1.1]<a class="headerlink" href="#forest-area-as-a-proportion-of-total-land-area-15-1-1" title="Permalink to this heading">¶</a></h1>
 <p>In this exercise you will learn how to calculate the indicator 15.1.1 which is defined as the forest area as a proportion of total land area, and is expressed in percentages. To learn more about this indicator read the metadata provided under this <a class="reference external" href="https://unstats.un.org/sdgs/metadata/?Text=&amp;Goal=15&amp;Target=15.1">link</a>.
-The method of computation is given by the following formula: <span class="math notranslate nohighlight">\(\frac{\text{Forest area (reference year)}}{\text{Land area (reference year)}} * 100\)</span>,
-thus we need to first define the region and reference year for which the indicator needs to be calculated. After that, we need to estimate the forest area and land area of the region.
-In this case study we’ll be working on calculating the indicator for Suriname for the reference year 2019.</p>
+The method of computation is given by the following formula:</p>
+<p><span class="math notranslate nohighlight">\(\frac{\text{Forest area (reference year)}}{\text{Land area (reference year)}} * 100\)</span>,</p>
+<p>thus we need to first define the region and reference year for which the indicator needs to be calculated. After that, we need to estimate the forest area and land area of the region.
+In this case study we”ll be working on calculating the indicator for Suriname for the reference year 2019.</p>
 <p>The first step is to download the vector data of the countries in shapefile format from the <a class="reference external" href="https://datacatalog.worldbank.org/search/dataset/0038272">WorldBank</a> (<a class="reference internal" href="#id1"><span class="std std-numref">Fig. 4.1.1</span></a>).
-The file contains polygons of all the world’s countries, and it will come useful in next exercises.</p>
+The file contains polygons of all the world”s countries, and it will come useful in next exercises.</p>
 <figure class="align-center" id="id16">
 <span id="id1"></span><a class="reference internal image-reference" href="../_images/4.1.1.png"><img alt="../_images/4.1.1.png" src="../_images/4.1.1.png" style="width: 400px;" /></a>
 <figcaption>
@@ -193,103 +194,103 @@ The file contains polygons of all the world’s countries, and it will come usef
 </figcaption>
 </figure>
 <p>After downloading the file open QGIS and create a new project, to which add the new shapefile (<a class="reference internal" href="#id2"><span class="std std-numref">Fig. 4.1.2</span></a>).</p>
-<figure class="align-default" id="id17">
-<span id="id2"></span><img alt="../_images/4.1.2.png" src="../_images/4.1.2.png" />
+<figure class="align-center" id="id17">
+<span id="id2"></span><a class="reference internal image-reference" href="../_images/4.1.2.png"><img alt="../_images/4.1.2.png" src="../_images/4.1.2.png" style="width: 700px;" /></a>
 <figcaption>
 <p><span class="caption-number">Fig. 4.1.2 </span><span class="caption-text">Adding a vector layer to QGIS interface</span><a class="headerlink" href="#id17" title="Permalink to this image">¶</a></p>
 </figcaption>
 </figure>
-<p>Now we need to extract from the world’s map only the polygon of Suriname. To do so we will use the ‘Select Features by Area or Single Click’ and select Suriname as shown in <a class="reference internal" href="#id3"><span class="std std-numref">Fig. 4.1.3</span></a>.</p>
-<figure class="align-default" id="id18">
-<span id="id3"></span><img alt="../_images/4.1.3.png" src="../_images/4.1.3.png" />
+<p>Now we need to extract from the world”s map only the polygon of Suriname. To do so we will use the “<em>Select Features by Area or Single Click</em>”” and select Suriname as shown in <a class="reference internal" href="#id3"><span class="std std-numref">Fig. 4.1.3</span></a>.</p>
+<figure class="align-center" id="id18">
+<span id="id3"></span><a class="reference internal image-reference" href="../_images/4.1.3.png"><img alt="../_images/4.1.3.png" src="../_images/4.1.3.png" style="width: 700px;" /></a>
 <figcaption>
 <p><span class="caption-number">Fig. 4.1.3 </span><span class="caption-text">Selecting Suriname by area</span><a class="headerlink" href="#id18" title="Permalink to this image">¶</a></p>
 </figcaption>
 </figure>
-<p>After selecting Suriname we will want to create a new shapefile containing only this one polygon. To do so we need to Save the selected features in our working directory and name it (<a class="reference internal" href="#id4"><span class="std std-numref">Fig. 4.1.4</span></a>). Make sure that the ‘Add saved file to map’ box is checked.</p>
-<figure class="align-default" id="id19">
-<span id="id4"></span><img alt="../_images/4.1.4.png" src="../_images/4.1.4.png" />
+<p>After selecting Suriname we will want to create a new shapefile containing only this one polygon. To do so we need to Save the selected features in our working directory and name it (<a class="reference internal" href="#id4"><span class="std std-numref">Fig. 4.1.4</span></a>). Make sure that the “<em>Add saved file to map</em>”” box is checked.</p>
+<figure class="align-center" id="id19">
+<span id="id4"></span><a class="reference internal image-reference" href="../_images/4.1.4.png"><img alt="../_images/4.1.4.png" src="../_images/4.1.4.png" style="width: 700px;" /></a>
 <figcaption>
 <p><span class="caption-number">Fig. 4.1.4 </span><span class="caption-text">Exporting selected features as a new layer</span><a class="headerlink" href="#id19" title="Permalink to this image">¶</a></p>
 </figcaption>
 </figure>
-<p>To better visualize the borders of Suriname, change the symbology of the layer. To do so, right click the ‘Suriname’ layer in the layer pane and select ‘Properties’. After that go to ‘Symbology’ and change it so that the fill color is set to ‘no brush’, the stroke color is of a bright, contrasting color, and the strike width is quite thick (<a class="reference internal" href="#id5"><span class="std std-numref">Fig. 4.1.5</span></a>).</p>
-<figure class="align-default" id="id20">
-<span id="id5"></span><img alt="../_images/4.1.5.png" src="../_images/4.1.5.png" />
+<p>To better visualize the borders of Suriname, change the symbology of the layer. To do so, right click the “<em>Suriname</em>” layer in the layer pane and select “<em>Properties</em>”. After that go to “<em>Symbology</em>” and change it so that the fill color is set to “<em>no brush</em>”, the stroke color is of a bright, contrasting color, and the strike width is quite thick (<a class="reference internal" href="#id5"><span class="std std-numref">Fig. 4.1.5</span></a>).</p>
+<figure class="align-center" id="id20">
+<span id="id5"></span><a class="reference internal image-reference" href="../_images/4.1.5.png"><img alt="../_images/4.1.5.png" src="../_images/4.1.5.png" style="width: 400px;" /></a>
 <figcaption>
 <p><span class="caption-number">Fig. 4.1.5 </span><span class="caption-text">Changing the symbology of the new Suriname.shp layer</span><a class="headerlink" href="#id20" title="Permalink to this image">¶</a></p>
 </figcaption>
 </figure>
-<p>Now that we have the Suriname polygon, which will serve us to derive the land area for the calculations, it’s time to access the forest data. We will use the Global Land Cover data from <a class="reference external" href="https://lcviewer.vito.be/2015">https://lcviewer.vito.be/2015</a>. After accessing the website follow the instructions shown in <a class="reference internal" href="#id6"><span class="std std-numref">Fig. 4.1.6</span></a> to retrieve the forest coverage raster file of the Suriname area.</p>
-<figure class="align-default" id="id21">
-<span id="id6"></span><img alt="../_images/4.1.6.png" src="../_images/4.1.6.png" />
+<p>Now that we have the Suriname polygon, which will serve us to derive the land area for the calculations, it”s time to access the forest data. We will use the Global Land Cover data from <a class="reference external" href="https://lcviewer.vito.be/2015">https://lcviewer.vito.be/2015</a>. After accessing the website follow the instructions shown in <a class="reference internal" href="#id6"><span class="std std-numref">Fig. 4.1.6</span></a> to retrieve the forest coverage raster file of the Suriname area.</p>
+<figure class="align-center" id="id21">
+<span id="id6"></span><a class="reference internal image-reference" href="../_images/4.1.6.png"><img alt="../_images/4.1.6.png" src="../_images/4.1.6.png" style="width: 700px;" /></a>
 <figcaption>
 <p><span class="caption-number">Fig. 4.1.6 </span><span class="caption-text">Downloading forest data</span><a class="headerlink" href="#id21" title="Permalink to this image">¶</a></p>
 </figcaption>
 </figure>
-<p>After downloading the file, add it to the project by using the ‘Add Raster Layer’ function, which you’ll access analogically to the ‘Add Vector Layer’ presented before.</p>
-<figure class="align-default" id="id22">
-<span id="id7"></span><img alt="../_images/4.1.7.png" src="../_images/4.1.7.png" />
+<p>After downloading the file, add it to the project by using the “<em>Add Raster Layer</em>” function, which you”ll access analogically to the “<em>Add Vector Layer</em>” presented before.</p>
+<figure class="align-center" id="id22">
+<span id="id7"></span><a class="reference internal image-reference" href="../_images/4.1.7.png"><img alt="../_images/4.1.7.png" src="../_images/4.1.7.png" style="width: 500px;" /></a>
 <figcaption>
 <p><span class="caption-number">Fig. 4.1.7 </span><span class="caption-text">Adding the forest raster data layer to the project</span><a class="headerlink" href="#id22" title="Permalink to this image">¶</a></p>
 </figcaption>
 </figure>
 <p>After adding the downloaded vector and the raster layer, the view of your project should be similar to the one shown in <a class="reference internal" href="#id8"><span class="std std-numref">Fig. 4.1.8</span></a>.</p>
-<figure class="align-default" id="id23">
-<span id="id8"></span><img alt="../_images/4.1.8.png" src="../_images/4.1.8.png" />
+<figure class="align-center" id="id23">
+<span id="id8"></span><a class="reference internal image-reference" href="../_images/4.1.8.png"><img alt="../_images/4.1.8.png" src="../_images/4.1.8.png" style="width: 700px;" /></a>
 <figcaption>
 <p><span class="caption-number">Fig. 4.1.8 </span><span class="caption-text">Expected layer view after adding both the vector and raster layer</span><a class="headerlink" href="#id23" title="Permalink to this image">¶</a></p>
 </figcaption>
 </figure>
 <p>To extract the forest areas of Suriname we need to clip the forest raster layer by mask as shown in <a class="reference internal" href="#id9"><span class="std std-numref">Fig. 4.1.9</span></a>.</p>
-<figure class="align-default" id="id24">
-<span id="id9"></span><img alt="../_images/4.1.9.png" src="../_images/4.1.9.png" />
+<figure class="align-center" id="id24">
+<span id="id9"></span><a class="reference internal image-reference" href="../_images/4.1.9.png"><img alt="../_images/4.1.9.png" src="../_images/4.1.9.png" style="width: 700px;" /></a>
 <figcaption>
 <p><span class="caption-number">Fig. 4.1.9 </span><span class="caption-text">Clip forest data raster layer by Suriname vector mask layer</span><a class="headerlink" href="#id24" title="Permalink to this image">¶</a></p>
 </figcaption>
 </figure>
-<p>he forest raster layer is a Fractional Cover layer, this means that it gives the percentage of a 100 m pixel that is filled with forest. Pixels have values between 0 and 100, in steps of 1%. Since we just need the information whether the forest is present or not we will reclassify the layer using the Raster Calculator (<a class="reference internal" href="#id10"><span class="std std-numref">Fig. 4.1.10</span></a>). We’ll classify the pixels with a value equal or bigger than 50% as forest (1) and the rest as no forest pixels (0).</p>
-<figure class="align-default" id="id25">
-<span id="id10"></span><img alt="../_images/4.1.10.png" src="../_images/4.1.10.png" />
+<p>he forest raster layer is a Fractional Cover layer, this means that it gives the percentage of a 100 m pixel that is filled with forest. Pixels have values between 0 and 100, in steps of 1%. Since we just need the information whether the forest is present or not we will reclassify the layer using the Raster Calculator (<a class="reference internal" href="#id10"><span class="std std-numref">Fig. 4.1.10</span></a>). We”ll classify the pixels with a value equal or bigger than 50% as forest (1) and the rest as no forest pixels (0).</p>
+<figure class="align-center" id="id25">
+<span id="id10"></span><a class="reference internal image-reference" href="../_images/4.1.10.png"><img alt="../_images/4.1.10.png" src="../_images/4.1.10.png" style="width: 700px;" /></a>
 <figcaption>
 <p><span class="caption-number">Fig. 4.1.10 </span><span class="caption-text">Reclassify the clipped raster layer</span><a class="headerlink" href="#id25" title="Permalink to this image">¶</a></p>
 </figcaption>
 </figure>
-<p>After reclassifying the raster let’s change the symbology of the new layer for better visualization of the forest area. The expected view after this operation should be as shown in <a class="reference internal" href="#id12"><span class="std std-numref">Fig. 4.1.12</span></a>.</p>
-<figure class="align-default" id="id26">
-<span id="id11"></span><img alt="../_images/4.1.11.png" src="../_images/4.1.11.png" />
+<p>After reclassifying the raster let”s change the symbology of the new layer for better visualization of the forest area. The expected view after this operation should be as shown in <a class="reference internal" href="#id12"><span class="std std-numref">Fig. 4.1.12</span></a>.</p>
+<figure class="align-center" id="id26">
+<span id="id11"></span><a class="reference internal image-reference" href="../_images/4.1.11.png"><img alt="../_images/4.1.11.png" src="../_images/4.1.11.png" style="width: 500px;" /></a>
 <figcaption>
 <p><span class="caption-number">Fig. 4.1.11 </span><span class="caption-text">Changing the symbology of forest data reclassified raster layer</span><a class="headerlink" href="#id26" title="Permalink to this image">¶</a></p>
 </figcaption>
 </figure>
-<figure class="align-default" id="id27">
-<span id="id12"></span><img alt="../_images/4.1.12.png" src="../_images/4.1.12.png" />
+<figure class="align-center" id="id27">
+<span id="id12"></span><a class="reference internal image-reference" href="../_images/4.1.12.png"><img alt="../_images/4.1.12.png" src="../_images/4.1.12.png" style="width: 700px;" /></a>
 <figcaption>
 <p><span class="caption-number">Fig. 4.1.12 </span><span class="caption-text">Expected layer view after changing the reclassified layer symbology</span><a class="headerlink" href="#id27" title="Permalink to this image">¶</a></p>
 </figcaption>
 </figure>
-<p>Since the pixels representing the forest have the value of 1 the sum of all the pixel values will give us the number of forest pixels in the raster file, and knowing the pixel’s size we can calculate the area of the forest in Suriname. To calculate the sum of the pixels values we’ll use the Zonal Statistics tool (<a class="reference internal" href="#id13"><span class="std std-numref">Fig. 4.1.13</span></a>).</p>
-<figure class="align-default" id="id28">
-<span id="id13"></span><img alt="../_images/4.1.13.png" src="../_images/4.1.13.png" />
+<p>Since the pixels representing the forest have the value of 1 the sum of all the pixel values will give us the number of forest pixels in the raster file, and knowing the pixel”s size we can calculate the area of the forest in Suriname. To calculate the sum of the pixels values we”ll use the “<em>Zonal Statistics tool</em>”” (<a class="reference internal" href="#id13"><span class="std std-numref">Fig. 4.1.13</span></a>).</p>
+<figure class="align-center" id="id28">
+<span id="id13"></span><a class="reference internal image-reference" href="../_images/4.1.13.png"><img alt="../_images/4.1.13.png" src="../_images/4.1.13.png" style="width: 700px;" /></a>
 <figcaption>
 <p><span class="caption-number">Fig. 4.1.13 </span><span class="caption-text">Zonal statistics tool</span><a class="headerlink" href="#id28" title="Permalink to this image">¶</a></p>
 </figcaption>
 </figure>
-<p>To organize the attribute table we can delete some of the unnecessary columns in the Suriname statistics layer (<a class="reference internal" href="#id14"><span class="std std-numref">Fig. 4.1.14</span></a>). It is not a mandatory step, but it provides a more clear view of the table and makes it easier to work with. The ‘_sum’ column is the result of applying the ‘Zonal statistic’ tool in the previous step.</p>
-<figure class="align-default" id="id29">
-<span id="id14"></span><img alt="../_images/4.1.14.png" src="../_images/4.1.14.png" />
+<p>To organize the attribute table we can delete some of the unnecessary columns in the Suriname statistics layer (<a class="reference internal" href="#id14"><span class="std std-numref">Fig. 4.1.14</span></a>). It is not a mandatory step, but it provides a more clear view of the table and makes it easier to work with. The “<em>_sum</em>” column is the result of applying the “<em>Zonal statistics</em>” tool in the previous step.</p>
+<figure class="align-center" id="id29">
+<span id="id14"></span><a class="reference internal image-reference" href="../_images/4.1.14.png"><img alt="../_images/4.1.14.png" src="../_images/4.1.14.png" style="width: 600px;" /></a>
 <figcaption>
 <p><span class="caption-number">Fig. 4.1.14 </span><span class="caption-text">Delete the unwanted columns</span><a class="headerlink" href="#id29" title="Permalink to this image">¶</a></p>
 </figcaption>
 </figure>
-<p>The last step is to finally calculate the indicator. We have all the required data in the ‘Suriname_stats’ layer. We will use the field calculator to calculate the indicator. Since we now that the pixel size is 100 m x 100 m we will calculate the forest area as: ‘_sum’ * 100 * 100. The land area is given by the built in function $area. The exact formula and result is shown in <a class="reference internal" href="#id15"><span class="std std-numref">Fig. 4.1.15</span></a>.</p>
-<figure class="align-default" id="id30">
-<span id="id15"></span><img alt="../_images/4.1.15.png" src="../_images/4.1.15.png" />
+<p>The last step is to finally calculate the indicator. We have all the required data in the “Suriname_stats” layer. We will use the field calculator to calculate the indicator. Since we now that the pixel size is 100 m x 100 m we will calculate the forest area as: <strong>“_sum” * 100 * 100</strong>. The land area is given by the built in function “$area”. The exact formula and result is shown in <a class="reference internal" href="#id15"><span class="std std-numref">Fig. 4.1.15</span></a>.</p>
+<figure class="align-center" id="id30">
+<span id="id15"></span><a class="reference internal image-reference" href="../_images/4.1.15.png"><img alt="../_images/4.1.15.png" src="../_images/4.1.15.png" style="width: 700px;" /></a>
 <figcaption>
 <p><span class="caption-number">Fig. 4.1.15 </span><span class="caption-text">Calculate the indicator 15.1.1 using the field calculator</span><a class="headerlink" href="#id30" title="Permalink to this image">¶</a></p>
 </figcaption>
 </figure>
-<p>The final result suggests that the forest areas contribute approximately 77.42% of the total land area of Suriname in 2019.</p>
+<p>The final result suggests that <strong>the forest areas contributed approximately 77.42% of the total land area of Suriname in 2019</strong>.</p>
 </section>
 
 

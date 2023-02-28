@@ -27,6 +27,7 @@
         <script src="../_static/underscore.js"></script>
         <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -179,11 +180,11 @@
             
   <section id="ratio-of-land-consumption-rate-to-population-growth-rate-11-3-1">
 <h1><span class="section-number">4.2. </span>Ratio of land consumption rate to population growth rate [11.3.1]<a class="headerlink" href="#ratio-of-land-consumption-rate-to-population-growth-rate-11-3-1" title="Permalink to this heading">¶</a></h1>
-<p>In this section you will learn how to calculate the indicator 11.3.1 which is defined as the ratio of land consumption rate to population growth rate. To be able to derive this indicator we need to first define the population growth and the land consumption rate.</p>
-<p>The population growth rate (PGR) is the change of a population in a defined area during a period, expressed as the percentage of the population at the start of that period. Its value depends on the number of births and deaths and on the migration patterns in the given period. In SDG 11.3.1 the PGR is computed for city areas.
-The land consumption rate (LCR) is defined as the rate at which urbanized land changes through a defined period of time. The LCR is expressed as the percent of the land occupied by the city/urban area at the start of that time. SDG 11.3.defines “land consumption” as the conversion of land from non-urban to urban functions.
-For the correct calculation of the index it is also needed to agree on what constitutes a city or urban area. For this purpose we will be using the Degree of Urbanization (DEGURBA) method to delineate cities, urban and rural areas for international statistical comparisons endorsed by the United Nations Statistical Commission (<a class="reference external" href="https://unstats.un.org/unsd/statcom/51st-session/documents/BG-Item3j-Recommendation-E.pdf">https://unstats.un.org/unsd/statcom/51st-session/documents/BG-Item3j-Recommendation-E.pdf</a>).
-For more information about the background of the SDG indicator 11.3.1 read the metadata provided under this link: <a class="reference external" href="https://unstats.un.org/sdgs/metadata/?Text=&amp;Goal=11&amp;Target=11.3">https://unstats.un.org/sdgs/metadata/?Text=&amp;Goal=11&amp;Target=11.3</a>
+<p>In this section you will learn how to calculate the <strong>SDG indicator 11.3.1</strong> which is defined as the ratio of land consumption rate to population growth rate. To be able to derive this indicator we need to first define the <strong>population growth</strong> and the <strong>land consumption rate</strong>.</p>
+<p>The <strong>population growth rate (PGR)</strong> is the change of a population in a defined area during a period, expressed as the percentage of the population at the start of that period. Its value depends on the number of births and deaths and on the migration patterns in the given period. In SDG 11.3.1 the PGR is computed for city areas.
+The <strong>land consumption rate (LCR)</strong> is defined as the rate at which urbanized land changes through a defined period of time. The LCR is expressed as the percent of the land occupied by the city/urban area at the start of that time. SDG 11.3.defines “<strong>land consumption</strong>” as the conversion of land from non-urban to urban functions.
+For the correct calculation of the index it is also needed to agree on what constitutes a city or urban area. For this purpose we will be using the <strong>Degree of Urbanization (DEGURBA)</strong> method to delineate cities, urban and rural areas for international statistical comparisons endorsed by the <a class="reference external" href="https://unstats.un.org/unsd/statcom/51st-session/documents/BG-Item3j-Recommendation-E.pdf">United Nations Statistical Commission</a>
+For more information about the background of the SDG indicator 11.3.1 read the metadata provided under this <a class="reference external" href="https://unstats.un.org/sdgs/metadata/?Text=&amp;Goal=11&amp;Target=11.3">link</a>
 The workflow for computing the indicator follows 5 steps:</p>
 <ol class="arabic simple">
 <li><p>Decide on the analysis period</p></li>
@@ -196,43 +197,43 @@ The workflow for computing the indicator follows 5 steps:</p>
 <li><p>In this exercise we will work on a one year interval from 2018 to 2019.</p></li>
 <li><p>We will use New Delhi as the analysis area. Download from <a class="reference external" href="https://ghsl.jrc.ec.europa.eu/ghs_stat_ucdb2015mt_r2019a.php">https://ghsl.jrc.ec.europa.eu/ghs_stat_ucdb2015mt_r2019a.php</a> the delimitation of urban areas file as shown in (<a class="reference internal" href="#id1"><span class="std std-numref">Fig. 4.2.1</span></a>).</p></li>
 </ol>
-<figure class="align-default" id="id25">
-<span id="id1"></span><img alt="../_images/4.2.1.png" src="../_images/4.2.1.png" />
+<figure class="align-center" id="id25">
+<span id="id1"></span><a class="reference internal image-reference" href="../_images/4.2.1.png"><img alt="../_images/4.2.1.png" src="../_images/4.2.1.png" style="width: 500px;" /></a>
 <figcaption>
 <p><span class="caption-number">Fig. 4.2.1 </span><span class="caption-text">Downloading the delimitation of urban areas file</span><a class="headerlink" href="#id25" title="Permalink to this image">¶</a></p>
 </figcaption>
 </figure>
 <p>Open a new QGIS project and add the downloaded vector (.gpkg) file to it (<a class="reference internal" href="#id2"><span class="std std-numref">Fig. 4.2.2</span></a>).</p>
-<figure class="align-default" id="id26">
-<span id="id2"></span><img alt="../_images/4.2.2.png" src="../_images/4.2.2.png" />
+<figure class="align-center" id="id26">
+<span id="id2"></span><a class="reference internal image-reference" href="../_images/4.2.2.png"><img alt="../_images/4.2.2.png" src="../_images/4.2.2.png" style="width: 700px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 4.2.2 </span><span class="caption-text">Adding the vector layer to a new QGIS project.</span><a class="headerlink" href="#id26" title="Permalink to this image">¶</a></p>
+<p><span class="caption-number">Fig. 4.2.2 </span><span class="caption-text">Adding the vector layer to a new QGIS project</span><a class="headerlink" href="#id26" title="Permalink to this image">¶</a></p>
 </figcaption>
 </figure>
-<p>We now want to extract only the delineation of New Delhi. After opening the attribute table of the just added layer, click on the ‘Select features using an expression’ icon (<a class="reference internal" href="#id3"><span class="std std-numref">Fig. 4.2.3</span></a>).</p>
-<figure class="align-default" id="id27">
-<span id="id3"></span><img alt="../_images/4.2.3.png" src="../_images/4.2.3.png" />
+<p>We now want to extract only the delineation of New Delhi. After opening the attribute table of the just added layer, click on the “<em>Select features using an expression</em>” icon (<a class="reference internal" href="#id3"><span class="std std-numref">Fig. 4.2.3</span></a>).</p>
+<figure class="align-center" id="id27">
+<span id="id3"></span><a class="reference internal image-reference" href="../_images/4.2.3.png"><img alt="../_images/4.2.3.png" src="../_images/4.2.3.png" style="width: 500px;" /></a>
 <figcaption>
 <p><span class="caption-number">Fig. 4.2.3 </span><span class="caption-text">Select features using an expression button in the attribute table</span><a class="headerlink" href="#id27" title="Permalink to this image">¶</a></p>
 </figcaption>
 </figure>
-<p>After the Selection by Expression window appears, enter the query: “UC_NM_MN = ‘Delhi [New Delhi]’” and click on ‘Select Features’ (<a class="reference internal" href="#id4"><span class="std std-numref">Fig. 4.2.4</span></a>).</p>
-<figure class="align-default" id="id28">
-<span id="id4"></span><img alt="../_images/4.2.4.png" src="../_images/4.2.4.png" />
+<p>After the Selection by Expression window appears, enter the query: <code class="docutils literal notranslate"><span class="pre">UC_NM_MN</span> <span class="pre">=</span> <span class="pre">&quot;Delhi</span> <span class="pre">[New</span> <span class="pre">Delhi]&quot;</span></code> and click on “<em>Select Features</em>” (<a class="reference internal" href="#id4"><span class="std std-numref">Fig. 4.2.4</span></a>).</p>
+<figure class="align-center" id="id28">
+<span id="id4"></span><a class="reference internal image-reference" href="../_images/4.2.4.png"><img alt="../_images/4.2.4.png" src="../_images/4.2.4.png" style="width: 700px;" /></a>
 <figcaption>
 <p><span class="caption-number">Fig. 4.2.4 </span><span class="caption-text">Selecting features by expression</span><a class="headerlink" href="#id28" title="Permalink to this image">¶</a></p>
 </figcaption>
 </figure>
-<p>After selecting New Delhi, extract it to a new vector layer ‘NewDelhi.shp’ as shown in <a class="reference internal" href="#id5"><span class="std std-numref">Fig. 4.2.5</span></a>.</p>
-<figure class="align-default" id="id29">
-<span id="id5"></span><img alt="../_images/4.2.5.png" src="../_images/4.2.5.png" />
+<p>After selecting New Delhi, extract it to a new vector layer “<em>NewDelhi.shp</em>” as shown in <a class="reference internal" href="#id5"><span class="std std-numref">Fig. 4.2.5</span></a>.</p>
+<figure class="align-center" id="id29">
+<span id="id5"></span><a class="reference internal image-reference" href="../_images/4.2.5.png"><img alt="../_images/4.2.5.png" src="../_images/4.2.5.png" style="width: 700px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 4.2.5 </span><span class="caption-text">Saving selected features as new vector layer.</span><a class="headerlink" href="#id29" title="Permalink to this image">¶</a></p>
+<p><span class="caption-number">Fig. 4.2.5 </span><span class="caption-text">Saving selected features as new vector layer</span><a class="headerlink" href="#id29" title="Permalink to this image">¶</a></p>
 </figcaption>
 </figure>
-<p>Change the symbology of the NewDelhi.shp layer to better visualize the delineation of the urban area (<a class="reference internal" href="#id6"><span class="std std-numref">Fig. 4.2.6</span></a>).</p>
-<figure class="align-default" id="id30">
-<span id="id6"></span><img alt="../_images/4.2.6.png" src="../_images/4.2.6.png" />
+<p>Change the symbology of the “<em>NewDelhi.shp</em>” layer to better visualize the delineation of the urban area (<a class="reference internal" href="#id6"><span class="std std-numref">Fig. 4.2.6</span></a>).</p>
+<figure class="align-center" id="id30">
+<span id="id6"></span><a class="reference internal image-reference" href="../_images/4.2.6.png"><img alt="../_images/4.2.6.png" src="../_images/4.2.6.png" style="width: 500px;" /></a>
 <figcaption>
 <p><span class="caption-number">Fig. 4.2.6 </span><span class="caption-text">Symbology of the New Delhi shapefile vector layer</span><a class="headerlink" href="#id30" title="Permalink to this image">¶</a></p>
 </figcaption>
@@ -240,145 +241,151 @@ The workflow for computing the indicator follows 5 steps:</p>
 <ol class="arabic simple" start="3">
 <li><p>To compute the land consumption rate in the period 2018-2019 we need the urban areas data from both of the year. We can access the Land Cover raster data from <a class="reference external" href="https://lcviewer.vito.be/download">https://lcviewer.vito.be/download</a>. Download the indicated tile from 2018 and 2019 as shown in <a class="reference internal" href="#id7"><span class="std std-numref">Fig. 4.2.7</span></a>.</p></li>
 </ol>
-<figure class="align-default" id="id31">
-<span id="id7"></span><img alt="../_images/4.2.7.png" src="../_images/4.2.7.png" />
+<figure class="align-center" id="id31">
+<span id="id7"></span><a class="reference internal image-reference" href="../_images/4.2.7.png"><img alt="../_images/4.2.7.png" src="../_images/4.2.7.png" style="width: 700px;" /></a>
 <figcaption>
 <p><span class="caption-number">Fig. 4.2.7 </span><span class="caption-text">Land cover raster data download</span><a class="headerlink" href="#id31" title="Permalink to this image">¶</a></p>
 </figcaption>
 </figure>
 <p>After downloading both raster layers, add them to your QGIS project (<a class="reference internal" href="#id8"><span class="std std-numref">Fig. 4.2.8</span></a>).</p>
-<figure class="align-default" id="id32">
-<span id="id8"></span><img alt="../_images/4.2.8.png" src="../_images/4.2.8.png" />
+<figure class="align-center" id="id32">
+<span id="id8"></span><a class="reference internal image-reference" href="../_images/4.2.8.png"><img alt="../_images/4.2.8.png" src="../_images/4.2.8.png" style="width: 700px;" /></a>
 <figcaption>
 <p><span class="caption-number">Fig. 4.2.8 </span><span class="caption-text">Adding the raster layers into the QGIS project (repeat for  the 2019 layer)</span><a class="headerlink" href="#id32" title="Permalink to this image">¶</a></p>
 </figcaption>
 </figure>
 <p>Now, clip both layers by mask of the New Delhi boundary, so that we will work only on the area of interest (<a class="reference internal" href="#id9"><span class="std std-numref">Fig. 4.2.9</span></a>).</p>
-<figure class="align-default" id="id33">
-<span id="id9"></span><img alt="../_images/4.2.9.png" src="../_images/4.2.9.png" />
+<figure class="align-center" id="id33">
+<span id="id9"></span><a class="reference internal image-reference" href="../_images/4.2.9.png"><img alt="../_images/4.2.9.png" src="../_images/4.2.9.png" style="width: 700px;" /></a>
 <figcaption>
 <p><span class="caption-number">Fig. 4.2.9 </span><span class="caption-text">Clipping the raster layer by the New Delhi boundary mask (repeat for  the 2019 layer)</span><a class="headerlink" href="#id33" title="Permalink to this image">¶</a></p>
 </figcaption>
 </figure>
-<p>Since we need only the urban areas of New Delhi, we would like to extract from the layers only the pixels representing urban/built up areas. From the ‘Copernicus Global Land Service: Land Cover 100m: version 3 Globe 2015-2019: Product User Manual’ (<a class="reference external" href="https://zenodo.org/record/4723921#.Y7Kv7BXMLD5">https://zenodo.org/record/4723921#.Y7Kv7BXMLD5</a>) we know that the map code for the urban/built up class is 50 (<a class="reference internal" href="#id10"><span class="std std-numref">Fig. 4.2.10</span></a>).</p>
-<figure class="align-default" id="id34">
-<span id="id10"></span><img alt="../_images/4.2.10.png" src="../_images/4.2.10.png" />
+<p>Since we need only the urban areas of New Delhi, we would like to extract from the layers only the pixels representing urban/built up areas. From the <a class="reference external" href="https://zenodo.org/record/4723921#.Y7Kv7BXMLD5">Copernicus Global Land Service: Land Cover 100m: version 3 Globe 2015-2019: Product User Manual</a> we know that the map code for the urban/built up class is 50 (<a class="reference internal" href="#id10"><span class="std std-numref">Fig. 4.2.10</span></a>).</p>
+<figure class="align-center" id="id34">
+<span id="id10"></span><a class="reference internal image-reference" href="../_images/4.2.10.png"><img alt="../_images/4.2.10.png" src="../_images/4.2.10.png" style="width: 700px;" /></a>
 <figcaption>
 <p><span class="caption-number">Fig. 4.2.10 </span><span class="caption-text">Classification of the land cover layer with map codes</span><a class="headerlink" href="#id34" title="Permalink to this image">¶</a></p>
 </figcaption>
 </figure>
-<p>We need to reclassify both rasters so that the pixels with the value of 50 have the value of 1 and the rest the value of 0. This step is performed  by using the Raster Calculator and inputting the expression: (“LC_New_Delhi201x&#64;1” = 50) * 1 + (“LC_New_Delhi201x&#64;1” != 50) * 0, where x is equal to 8 or 9 depending on the layer. The procedure for the 2018 layer is shown in <a class="reference internal" href="#id11"><span class="std std-numref">Fig. 4.2.11</span></a>.</p>
-<figure class="align-default" id="id35">
-<span id="id11"></span><img alt="../_images/4.2.11.png" src="../_images/4.2.11.png" />
+<p>We need to reclassify both rasters so that the pixels with the value of 50 have the value of 1 and the rest the value of 0. This step is performed by using the “<em>Raster Calculator</em>” and inputting the expression: <code class="docutils literal notranslate"><span class="pre">(“LC_New_Delhi201x&#64;1”</span> <span class="pre">=</span> <span class="pre">50)</span> <span class="pre">*</span> <span class="pre">1</span> <span class="pre">+</span> <span class="pre">(“LC_New_Delhi201x&#64;1”</span> <span class="pre">!=</span> <span class="pre">50)</span> <span class="pre">*</span> <span class="pre">0</span></code>, where x is equal to 8 or 9 depending on the layer. The procedure for the 2018 layer is shown in <a class="reference internal" href="#id11"><span class="std std-numref">Fig. 4.2.11</span></a>.</p>
+<figure class="align-center" id="id35">
+<span id="id11"></span><a class="reference internal image-reference" href="../_images/4.2.11.png"><img alt="../_images/4.2.11.png" src="../_images/4.2.11.png" style="width: 700px;" /></a>
 <figcaption>
 <p><span class="caption-number">Fig. 4.2.11 </span><span class="caption-text">Raster reclassification (repeat for the 2019 layer)</span><a class="headerlink" href="#id35" title="Permalink to this image">¶</a></p>
 </figcaption>
 </figure>
-<p>For better visualization, change the symbology of both reclassified layers, so that the render type is set to ‘Paletted/Unique values’ and the color of class 0 is set to transparent, as shown in <a class="reference internal" href="#id12"><span class="std std-numref">Fig. 4.2.12</span></a>.</p>
-<figure class="align-default" id="id36">
-<span id="id12"></span><img alt="../_images/4.2.12.png" src="../_images/4.2.12.png" />
+<p>For better visualization, change the symbology of both reclassified layers, so that the render type is set to “<em>Paletted/Unique values</em>” and the color of class 0 is set to transparent, as shown in <a class="reference internal" href="#id12"><span class="std std-numref">Fig. 4.2.12</span></a>.</p>
+<figure class="align-center" id="id36">
+<span id="id12"></span><a class="reference internal image-reference" href="../_images/4.2.12.png"><img alt="../_images/4.2.12.png" src="../_images/4.2.12.png" style="width: 700px;" /></a>
 <figcaption>
 <p><span class="caption-number">Fig. 4.2.12 </span><span class="caption-text">Symbology properties for the reclassified land cover raster layers (repeat for the 2019 layer)</span><a class="headerlink" href="#id36" title="Permalink to this image">¶</a></p>
 </figcaption>
 </figure>
 <p>The desired view after clipping, reclassifying and changing the symbology of the LC layer is as in <a class="reference internal" href="#id13"><span class="std std-numref">Fig. 4.2.13</span></a>.</p>
-<figure class="align-default" id="id37">
-<span id="id13"></span><img alt="../_images/4.2.13.png" src="../_images/4.2.13.png" />
+<figure class="align-center" id="id37">
+<span id="id13"></span><a class="reference internal image-reference" href="../_images/4.2.13.png"><img alt="../_images/4.2.13.png" src="../_images/4.2.13.png" style="width: 700px;" /></a>
 <figcaption>
 <p><span class="caption-number">Fig. 4.2.13 </span><span class="caption-text">Land cover layer of the urban areas after the preprocessing steps</span><a class="headerlink" href="#id37" title="Permalink to this image">¶</a></p>
 </figcaption>
 </figure>
-<p>To be able to calculate the Land Consumption Rate, we must know the area of the built up zones in both years. To do so, we firstly calculate the sum of the pixels by using the ‘zonal statistic’ tool (<a class="reference internal" href="#id14"><span class="std std-numref">Fig. 4.2.14</span></a>). By calculating the sum of all pixels we will actually get the sum of the pixels representing the urban class, as they have value 1 and the rest has value 0.</p>
-<figure class="align-default" id="id38">
-<span id="id14"></span><img alt="../_images/4.2.14.png" src="../_images/4.2.14.png" />
+<p>To be able to calculate the Land Consumption Rate, we must know the area of the built up zones in both years. To do so, we firstly calculate the sum of the pixels by using the “<em>Zonal Statistics</em>” tool (<a class="reference internal" href="#id14"><span class="std std-numref">Fig. 4.2.14</span></a>). By calculating the sum of all pixels we will actually get the sum of the pixels representing the urban class, as they have value 1 and the rest has value 0.</p>
+<figure class="align-center" id="id38">
+<span id="id14"></span><a class="reference internal image-reference" href="../_images/4.2.14.png"><img alt="../_images/4.2.14.png" src="../_images/4.2.14.png" style="width: 700px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 4.2.14 </span><span class="caption-text">Calculating the sum of pixel values using ‘zonal statistics’</span><a class="headerlink" href="#id38" title="Permalink to this image">¶</a></p>
+<p><span class="caption-number">Fig. 4.2.14 </span><span class="caption-text">Calculating the sum of pixel values using “<em>Zonal statistics</em>”</span><a class="headerlink" href="#id38" title="Permalink to this image">¶</a></p>
 </figcaption>
 </figure>
-<p>Having the zonal_stats layers with the sum of the urban pixels, we can now calculate the area of the urban zones in New Delhi in both years, knowing that the pixel size is 100x100m. For both zonal_stats layers open the field calculator and add a new field for the built up area in square km. Calculate the value of the field by multiplying the ‘_sum’ field by 0.1 * 0.1 (km). The step for the ‘zonal_stats_2018’ is shown in <a class="reference internal" href="#id15"><span class="std std-numref">Fig. 4.2.15</span></a>, be sure to repeat the step also for ‘zonal_stats_2019’.</p>
-<figure class="align-default" id="id39">
-<span id="id15"></span><img alt="../_images/4.2.15.png" src="../_images/4.2.15.png" />
+<p>Having the zonal_stats layers with the sum of the urban pixels, we can now calculate the area of the urban zones in New Delhi in both years, knowing that the pixel size is 100x100m. For both zonal_stats layers open the field calculator and add a new field for the built up area in square km. Calculate the value of the field by multiplying the “_sum” field by 0.1 * 0.1 (km). The step for the “zonal_stats_2018” is shown in <a class="reference internal" href="#id15"><span class="std std-numref">Fig. 4.2.15</span></a>, be sure to repeat the step also for “zonal_stats_2019”.</p>
+<figure class="align-center" id="id39">
+<span id="id15"></span><a class="reference internal image-reference" href="../_images/4.2.15.png"><img alt="../_images/4.2.15.png" src="../_images/4.2.15.png" style="width: 700px;" /></a>
 <figcaption>
 <p><span class="caption-number">Fig. 4.2.15 </span><span class="caption-text">Calculating the urban area in square kilometers (repeat for the 2019 layer)</span><a class="headerlink" href="#id39" title="Permalink to this image">¶</a></p>
 </figcaption>
 </figure>
 <p>Finally, it is possible to calculate the Land Consumption Rate (LCR) by applying this formula: LCR = (Vpresent - Vpast)/Vpast, to the calculated values in the previous steps.
-We will calculate it in a new field in the attribute table of the ‘zonal_stats_2018’ layer as shown in <a class="reference internal" href="#id16"><span class="std std-numref">Fig. 4.2.16</span></a>.</p>
-<figure class="align-default" id="id40">
-<span id="id16"></span><img alt="../_images/4.2.16.png" src="../_images/4.2.16.png" />
+We will calculate it in a new field in the attribute table of the “zonal_stats_2018” layer as shown in <a class="reference internal" href="#id16"><span class="std std-numref">Fig. 4.2.16</span></a>.</p>
+<figure class="align-center" id="id40">
+<span id="id16"></span><a class="reference internal image-reference" href="../_images/4.2.16.png"><img alt="../_images/4.2.16.png" src="../_images/4.2.16.png" style="width: 700px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 4.2.16 </span><span class="caption-text">Calculaing the Land Consumption Rate.</span><a class="headerlink" href="#id40" title="Permalink to this image">¶</a></p>
+<p><span class="caption-number">Fig. 4.2.16 </span><span class="caption-text">Calculating the Land Consumption Rate</span><a class="headerlink" href="#id40" title="Permalink to this image">¶</a></p>
 </figcaption>
 </figure>
 <ol class="arabic simple" start="4">
 <li><p>Having calculated the LCR, it is time to calculate the second index needed to calculate SDG 11.3.1 - the Population Growth Rate.</p></li>
 </ol>
 <p>The PGR is calculated using the total population within the urban area for the analysis period using the formula below:</p>
-<p>𝐏𝐆𝐑 = 𝐋𝐍(𝐏𝐨𝐩𝐭+𝐧/𝐏𝐨𝐩𝐭) / (𝐲),</p>
-<p>where LN is the natural logarithm value; Popt is the total population within the urban area in the initial year; Popt+n is the total population within the urban area in the final year; y is the number of years between the two measurement periods.
-Thus, to calculate the PGR we need the population of New Delhi in 2018 and in 2019.
-To get this information we first need to download the population layers for India in 2018 and 2019 from <a class="reference external" href="https://hub.worldpop.org/geodata/listing?id=29">https://hub.worldpop.org/geodata/listing?id=29</a> by clicking ‘Data &amp; Resources’ and then ‘Download Entire Dataset’ (<a class="reference internal" href="#id17"><span class="std std-numref">Fig. 4.2.17</span></a>).</p>
-<figure class="align-default" id="id41">
-<span id="id17"></span><img alt="../_images/4.2.17.png" src="../_images/4.2.17.png" />
+<p><span class="math notranslate nohighlight">\(PGR = \frac{\ln(\frac{Pop_{(t+n)}}{Pop_t})}{y}\)</span>,</p>
+<p>where:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\ln\)</span> is the natural logarithm value;</p></li>
+<li><p><span class="math notranslate nohighlight">\(Pop_t\)</span> is the total population within the urban area in the initial year;</p></li>
+<li><p><span class="math notranslate nohighlight">\(Pop_{t+n}\)</span> is the total population within the urban area in the final year;</p></li>
+<li><p><span class="math notranslate nohighlight">\(y\)</span> is the number of years between the two measurement periods.</p></li>
+</ul>
+<p>Thus, to calculate the PGR we need the population of New Delhi in 2018 and in 2019.
+To get this information we first need to download the population layers for India in 2018 and 2019 from <a class="reference external" href="https://hub.worldpop.org/geodata/listing?id=29">https://hub.worldpop.org/geodata/listing?id=29</a> by clicking “<em>Data &amp; Resources</em>” and then “<em>Download Entire Dataset</em>” (<a class="reference internal" href="#id17"><span class="std std-numref">Fig. 4.2.17</span></a>).</p>
+<figure class="align-center" id="id41">
+<span id="id17"></span><a class="reference internal image-reference" href="../_images/4.2.17.png"><img alt="../_images/4.2.17.png" src="../_images/4.2.17.png" style="width: 700px;" /></a>
 <figcaption>
 <p><span class="caption-number">Fig. 4.2.17 </span><span class="caption-text">Downloading the population layers for India</span><a class="headerlink" href="#id41" title="Permalink to this image">¶</a></p>
 </figcaption>
 </figure>
 <p>Load the population layers to the QGIS project and clip them both to New Delhi boundaries. (<a class="reference internal" href="#id18"><span class="std std-numref">Fig. 4.2.18</span></a>).</p>
-<figure class="align-default" id="id42">
-<span id="id18"></span><img alt="../_images/4.2.18.png" src="../_images/4.2.18.png" />
+<figure class="align-center" id="id42">
+<span id="id18"></span><a class="reference internal image-reference" href="../_images/4.2.18.png"><img alt="../_images/4.2.18.png" src="../_images/4.2.18.png" style="width: 700px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 4.2.18 </span><span class="caption-text">Clipping the population layer for the year 2018 to New Delhi’s boundaries. Repeat the process for the 2019 layer.</span><a class="headerlink" href="#id42" title="Permalink to this image">¶</a></p>
+<p><span class="caption-number">Fig. 4.2.18 </span><span class="caption-text">Clipping the population layer for the year 2018 to New Delhi’s boundaries. Repeat the process for the 2019 layer</span><a class="headerlink" href="#id42" title="Permalink to this image">¶</a></p>
 </figcaption>
 </figure>
-<p>Use the ‚zonal statistics’ tool to calculate New Delhi’s population in 2018 and 2019. Select only the ‘sum’ statistics, which will give us the population, as shown in <a class="reference internal" href="#id19"><span class="std std-numref">Fig. 4.2.19</span></a>.</p>
-<figure class="align-default" id="id43">
-<span id="id19"></span><img alt="../_images/4.2.19.png" src="../_images/4.2.19.png" />
+<p>Use the “<em>Zonal Statistics</em>” tool to calculate New Delhi’s population in 2018 and 2019. Select only the “<em>Sum</em>” statistics, which will give us the population, as shown in <a class="reference internal" href="#id19"><span class="std std-numref">Fig. 4.2.19</span></a>.</p>
+<figure class="align-center" id="id43">
+<span id="id19"></span><a class="reference internal image-reference" href="../_images/4.2.19.png"><img alt="../_images/4.2.19.png" src="../_images/4.2.19.png" style="width: 700px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 4.2.19 </span><span class="caption-text">Calulating New Delhi’s population in 2018. Repeat for the 2019 layer.</span><a class="headerlink" href="#id43" title="Permalink to this image">¶</a></p>
+<p><span class="caption-number">Fig. 4.2.19 </span><span class="caption-text">Calculating New Delhi’s population in 2018. Repeat for the 2019 layer</span><a class="headerlink" href="#id43" title="Permalink to this image">¶</a></p>
 </figcaption>
 </figure>
 <p>After the previous step we’ll obtain two layers for both years. To make the computations easier we want to have the population field for both years in one layer.
-To do so add a new column “population_2019” to the 2018 population zonal statistics layer. Then copy the content of the “_sum” field from the 2019 population zonal statistics layer to the newly created column in the 2018 layer (<a class="reference internal" href="#id20"><span class="std std-numref">Fig. 4.2.20</span></a>).</p>
-<figure class="align-default" id="id44">
-<span id="id20"></span><img alt="../_images/4.2.20.png" src="../_images/4.2.20.png" />
+To do so add a new column “<em>population_2019</em>” to the 2018 population zonal statistics layer. Then copy the content of the “<em>_sum</em>” field from the 2019 population zonal statistics layer to the newly created column in the 2018 layer (<a class="reference internal" href="#id20"><span class="std std-numref">Fig. 4.2.20</span></a>).</p>
+<figure class="align-center" id="id44">
+<span id="id20"></span><a class="reference internal image-reference" href="../_images/4.2.20.png"><img alt="../_images/4.2.20.png" src="../_images/4.2.20.png" style="width: 700px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 4.2.20 </span><span class="caption-text">Adding the population of 2019 to the 2018 zonal statistics layer.</span><a class="headerlink" href="#id44" title="Permalink to this image">¶</a></p>
+<p><span class="caption-number">Fig. 4.2.20 </span><span class="caption-text">Adding the population of 2019 to the 2018 zonal statistics layer</span><a class="headerlink" href="#id44" title="Permalink to this image">¶</a></p>
 </figcaption>
 </figure>
-<p>To change the name of a field in the attribute table go to the ‘Properties’ of the layer and in the ‘Field’ section activate the editing option (pencil icon). Now you can change the name of the ‘_sum’ column to ‘population_2018’ (<a class="reference internal" href="#id21"><span class="std std-numref">Fig. 4.2.21</span></a>).</p>
-<figure class="align-default" id="id45">
-<span id="id21"></span><img alt="../_images/4.2.21.png" src="../_images/4.2.21.png" />
+<p>To change the name of a field in the attribute table go to the “<em>Properties</em>” of the layer and in the “<em>Field</em>” section activate the editing option (pencil icon). Now you can change the name of the “<em>_sum</em>” column to “<em>population_2018</em>” (<a class="reference internal" href="#id21"><span class="std std-numref">Fig. 4.2.21</span></a>).</p>
+<figure class="align-center" id="id45">
+<span id="id21"></span><a class="reference internal image-reference" href="../_images/4.2.21.png"><img alt="../_images/4.2.21.png" src="../_images/4.2.21.png" style="width: 600px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 4.2.21 </span><span class="caption-text">Changing the name of a field in a layer’s attribute table.</span><a class="headerlink" href="#id45" title="Permalink to this image">¶</a></p>
+<p><span class="caption-number">Fig. 4.2.21 </span><span class="caption-text">Changing the name of a field in a layer’s attribute table</span><a class="headerlink" href="#id45" title="Permalink to this image">¶</a></p>
 </figcaption>
 </figure>
-<p>Now that we have the population values for both years in one layer we can calculate the PGR using the ‘field calculator’ tool.
-Create a new field where you’ll calculate the PGR value using the before mentioned formula as shown in <a class="reference internal" href="#id22"><span class="std std-numref">Fig. 4.2.22</span></a>.</p>
-<figure class="align-default" id="id46">
-<span id="id22"></span><img alt="../_images/4.2.22.png" src="../_images/4.2.22.png" />
+<p>Now that we have the population values for both years in one layer we can calculate the PGR using the “<em>Field Calculator</em>” tool.
+Create a new field where you’ll calculate the <strong>PGR value</strong> using the before mentioned formula as shown in <a class="reference internal" href="#id22"><span class="std std-numref">Fig. 4.2.22</span></a>.</p>
+<figure class="align-center" id="id46">
+<span id="id22"></span><a class="reference internal image-reference" href="../_images/4.2.22.png"><img alt="../_images/4.2.22.png" src="../_images/4.2.22.png" style="width: 700px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 4.2.22 </span><span class="caption-text">Calculating the PGR index.</span><a class="headerlink" href="#id46" title="Permalink to this image">¶</a></p>
+<p><span class="caption-number">Fig. 4.2.22 </span><span class="caption-text">Calculating the PGR index</span><a class="headerlink" href="#id46" title="Permalink to this image">¶</a></p>
 </figcaption>
 </figure>
-<p>To have both the PGR and the LCR indexes in one layer, add a new field named ‘PGR’ in the attribute table of the ‘zonal_stats_2018’ layer containing the previously calculated LCR (<a class="reference internal" href="#id23"><span class="std std-numref">Fig. 4.2.23</span></a>).</p>
-<figure class="align-default" id="id47">
-<span id="id23"></span><img alt="../_images/4.2.23.png" src="../_images/4.2.23.png" />
+<p>To have both the <strong>PGR</strong> and the <strong>LCR</strong> indexes in one layer, add a new field named “<em>PGR</em>” in the attribute table of the “<em>zonal_stats_2018</em>” layer containing the previously calculated <strong>LCR</strong> (<a class="reference internal" href="#id23"><span class="std std-numref">Fig. 4.2.23</span></a>).</p>
+<figure class="align-center" id="id47">
+<span id="id23"></span><a class="reference internal image-reference" href="../_images/4.2.23.png"><img alt="../_images/4.2.23.png" src="../_images/4.2.23.png" style="width: 600px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 4.2.23 </span><span class="caption-text">Adding the PGR field into the ‘zonal_stats_2018’ layer.</span><a class="headerlink" href="#id47" title="Permalink to this image">¶</a></p>
+<p><span class="caption-number">Fig. 4.2.23 </span><span class="caption-text">Adding the PGR field into the “<em>zonal_stats_2018</em>” layer</span><a class="headerlink" href="#id47" title="Permalink to this image">¶</a></p>
 </figcaption>
 </figure>
 <ol class="arabic simple" start="5">
-<li><p>Having the LCR and the PGR in the ‘zonal_stats_2018’ layer we can calculate the SDG indicator 11.3.1 in the same layer by dividing the LCR by the PGR.</p></li>
+<li><p>Having the LCR and the PGR in the “<em>zonal_stats_2018</em>” layer we can calculate the SDG indicator 11.3.1 in the same layer by dividing the LCR by the PGR.</p></li>
 </ol>
 <p>To calculate the indicator we will use once again the field calculator as shown in <a class="reference internal" href="#id24"><span class="std std-numref">Fig. 4.2.24</span></a>.</p>
-<figure class="align-default" id="id48">
-<span id="id24"></span><img alt="../_images/4.2.24.png" src="../_images/4.2.24.png" />
+<figure class="align-center" id="id48">
+<span id="id24"></span><a class="reference internal image-reference" href="../_images/4.2.24.png"><img alt="../_images/4.2.24.png" src="../_images/4.2.24.png" style="width: 700px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 4.2.24 </span><span class="caption-text">Calculating the SDG indicator 11.3.1.</span><a class="headerlink" href="#id48" title="Permalink to this image">¶</a></p>
+<p><span class="caption-number">Fig. 4.2.24 </span><span class="caption-text">Calculating the SDG indicator 11.3.1</span><a class="headerlink" href="#id48" title="Permalink to this image">¶</a></p>
 </figcaption>
 </figure>
-<p>For New Delhi the 11.3.1 indicator was estimated to be around 0.0387 in the 2018-2019 period.</p>
+<p>For New Delhi the 11.3.1 indicator was <strong>estimated to be around 0.0387 in the 2018-2019 period</strong>.</p>
 </section>
 
 
