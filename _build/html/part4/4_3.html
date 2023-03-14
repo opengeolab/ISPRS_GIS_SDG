@@ -113,6 +113,9 @@
 </ul>
 </li>
 </ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../credits.html">5. Credits</a></li>
+</ul>
 
             
           
@@ -180,10 +183,10 @@
             
   <section id="proportion-of-the-rural-population-who-live-within-2-km-of-an-all-season-road-9-1-1">
 <h1><span class="section-number">4.3. </span>Proportion of the rural population who live within 2 km of an all-season road [9.1.1]<a class="headerlink" href="#proportion-of-the-rural-population-who-live-within-2-km-of-an-all-season-road-9-1-1" title="Permalink to this heading">¶</a></h1>
-<p>This exercise”s purpose is to show how to compute the SDG indicator 9.1.1 defined as the share of a country”s rural population living within 2 km of an all-season road. This indicator is also commonly known as the Rural Access Index (RAI). To calculate the indicator it is needed to compute the ratio between the rural population within a 2 km buffer of an all-season road and the total rural population of the country.
+<p>This exercise’s purpose is to show how to compute the SDG indicator 9.1.1 defined as the share of a country’s rural population living within 2 km of an all-season road. This indicator is also commonly known as the Rural Access Index (RAI). To calculate the indicator it is needed to compute the ratio between the rural population within a 2 km buffer of an all-season road and the total rural population of the country.
 To compute this indicator we need three different geospatial datasets:</p>
 <ul>
-<li><p>The country”s population distribution, that can be retrieved from <a class="reference external" href="https://hub.worldpop.org/">WorldPop</a>;</p>
+<li><p>The country’s population distribution, that can be retrieved from <a class="reference external" href="https://hub.worldpop.org/">WorldPop</a>;</p>
 <blockquote>
 <div><ul class="simple">
 <li><p>From which it is necessary to extract only the rural population, which can be done using a Rural-Urban global definition provided by the <a class="reference external" href="https://ghsl.jrc.ec.europa.eu/ghs_stat_ucdb2015mt_r2019a.php">Global Human Settlement Layer</a>;</p></li>
@@ -267,6 +270,10 @@ To compute this indicator we need three different geospatial datasets:</p>
 </figcaption>
 </figure>
 <p>We now need to create the 2 km buffer around the major roads, by using the “<em>Buffer</em>” geoprocessing tool (<a class="reference internal" href="#id10"><span class="std std-numref">Fig. 4.3.10</span></a>). Because of reprojecting issues that may be encountered we input the distance in degrees.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>To work with metric buffer distance units, reproject all the layers in the correct <a class="reference external" href="https://www.dmap.co.uk/utmworld.htm">UTM zone</a>.</p>
+</div>
 <figure class="align-center" id="id39">
 <span id="id10"></span><a class="reference internal image-reference" href="../_images/4.3.10.png"><img alt="../_images/4.3.10.png" src="../_images/4.3.10.png" style="width: 700px;" /></a>
 <figcaption>
@@ -299,7 +306,7 @@ To compute this indicator we need three different geospatial datasets:</p>
 </figure>
 <p>After this step we have the rural population within a 2 km buffer of a major road (<a class="reference internal" href="#id14"><span class="std std-numref">Fig. 4.3.14</span></a>).</p>
 <figure class="align-center" id="id43">
-<span id="id14"></span><a class="reference internal image-reference" href="../_images/4.3.14.png"><img alt="../_images/4.3.14.png" src="../_images/4.3.14.png" style="width: 700px;" /></a>
+<span id="id14"></span><a class="reference internal image-reference" href="../_images/4.3.14.png"><img alt="../_images/4.3.14.png" src="../_images/4.3.14.png" style="width: 500px;" /></a>
 <figcaption>
 <p><span class="caption-number">Fig. 4.3.14 </span><span class="caption-text">Restult of the “zonal statistics” operation</span><a class="headerlink" href="#id43" title="Permalink to this image">¶</a></p>
 </figcaption>
@@ -340,14 +347,14 @@ Firstly, we need Gabon’s boundaries to delimitate the urban extent layer ust t
 <p><span class="caption-number">Fig. 4.3.19 </span><span class="caption-text">Changing the “<em>Gabon.shp</em>” symbology</span><a class="headerlink" href="#id48" title="Permalink to this image">¶</a></p>
 </figcaption>
 </figure>
-<p>Now we can clip the urban extent layer to Gabon”s borders by using the “<em>Clip</em>” geoprocessing tool (<a class="reference internal" href="#id20"><span class="std std-numref">Fig. 4.3.20</span></a>).</p>
+<p>Now we can clip the urban extent layer to Gabon’s borders by using the “<em>Clip</em>” geoprocessing tool (<a class="reference internal" href="#id20"><span class="std std-numref">Fig. 4.3.20</span></a>).</p>
 <figure class="align-center" id="id49">
 <span id="id20"></span><a class="reference internal image-reference" href="../_images/4.3.20.png"><img alt="../_images/4.3.20.png" src="../_images/4.3.20.png" style="width: 700px;" /></a>
 <figcaption>
 <p><span class="caption-number">Fig. 4.3.20 </span><span class="caption-text">Clipping the urban extent layer to Gabon’s extent</span><a class="headerlink" href="#id49" title="Permalink to this image">¶</a></p>
 </figcaption>
 </figure>
-<p>The urban extent polygons are now limited only to Gabon’s extent. If we open the attribute table now, we can see that for each urban area there”s a distinct row. Since we are interested in the urban areas as a whole we want to have just one record for all the urban areas in Gabon. To do so we need to use the “<em>Dissolve</em>” geoprocessing tool as shown in <a class="reference internal" href="#id21"><span class="std std-numref">Fig. 4.3.21</span></a>.</p>
+<p>The urban extent polygons are now limited only to Gabon’s extent. If we open the attribute table now, we can see that for each urban area there’s a distinct row. Since we are interested in the urban areas as a whole we want to have just one record for all the urban areas in Gabon. To do so we need to use the “<em>Dissolve</em>” geoprocessing tool as shown in <a class="reference internal" href="#id21"><span class="std std-numref">Fig. 4.3.21</span></a>.</p>
 <figure class="align-center" id="id50">
 <span id="id21"></span><a class="reference internal image-reference" href="../_images/4.3.21.png"><img alt="../_images/4.3.21.png" src="../_images/4.3.21.png" style="width: 700px;" /></a>
 <figcaption>

@@ -1,16 +1,41 @@
 Key QGIS functionalities for SDG indicators computation 
 ====================================================================
 
-Work in progress...
+QGIS provides thousands of functionalities and plugins to manipulate and analyze geospatial data. For the computation of SDG indicators using global geospatial datasets, a few key functionalities are needed. A selection of the most relevant ones is reported in :numref:`3.2.1`. The full set of QGIS functionalities can be found in the official `QGIS User Guide <https://docs.qgis.org/3.22/en/docs/user_manual/index.html>`_. 
 
-#. vector and raster import
-#. vector and raster symbology
-#. vector selections
-#. export selections in a new vector layer
-#. attribute table manipulation / field calculator / add geometry attribute 
-#. vector geoprocessing - buffer/difference/dissolve
-#. raster clip
-#. raster reclassify/calculator
-#. raster layer statistics
-#. zonal statistics
-#. raster to vector
+.. _3.2.1:
+.. list-table:: Selection of QGIS functionalities for SDG indicators computation
+   :widths: 10 10 10
+   :header-rows: 1
+
+   * - Function
+     - Description
+     - Link
+   * - Vector and raster data import, |br| coordinate reference system management |br| and layer symbology
+     - Basic QGIS operations for data I/O |br| and map visualization
+     - https://docs.qgis.org/3.22/en/docs/user_manual/introduction/getting_started.html#sample-session-loading-raster-and-vector-layers
+   * - Vector feature selections
+     - Selection/extraction of data |br| subsets from vector layers based |br| on user-selected rules
+     - https://docs.qgis.org/3.22/en/docs/user_manual/introduction/general_tools.html#interacting-with-features 
+   * - Vector attribute table manipulation
+     - Editing tools for vector layers |br| attribute table 
+     - https://docs.qgis.org/3.22/en/docs/user_manual/working_with_vector/attribute_table.html 
+   * - Vector geoprocessing
+     - Geometry processing functionalities |br| for vector layers
+     - https://docs.qgis.org/3.22/en/docs/user_manual/processing_algs/gdal/vectorgeoprocessing.html#vector-geoprocessing
+   * - Raster layer clip
+     - Subsetting functionalities for |br| raster datasets
+     - https://docs.qgis.org/3.22/en/docs/training_manual/processing/cutting_merging.html?highlight=raster#clipping-and-merging-raster-layers
+   * - Raster calculator
+     - Computational tool for |br| raster pixel values
+     - https://docs.qgis.org/3.22/en/docs/user_manual/working_with_raster/raster_analysis.html#raster-calculator
+   * - Raster layer statistics
+     - Basic statistics extraction from |br| raster pixel values
+     - https://docs.qgis.org/3.22/en/docs/user_manual/processing_algs/qgis/rasteranalysis.html?highlight=raster%20stat#raster-layer-statistics
+   * - Zonal statistics
+     - Raster statistics spatially constrained |br| to overlapping vector layers
+     - https://docs.qgis.org/3.22/en/docs/user_manual/processing_algs/qgis/rasteranalysis.html?highlight=raster%20stat#zonal-statistics
+   
+.. |br| raw:: html
+
+  <br>

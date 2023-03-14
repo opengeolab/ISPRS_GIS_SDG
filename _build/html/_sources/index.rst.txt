@@ -26,8 +26,7 @@ In view of the above, this project, supported by the `Educational and Capacity B
    part4/part4
    
 .. toctree::
-   :hidden:
-
+   
    credits
 
 Co-funded by the International Society for Photogrammetry and Remote Sensing as a Educational and Capacity Building Initiatives project.

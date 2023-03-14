@@ -1,8 +1,6 @@
 Change in the extent of water-related ecosystems over time [6.6.1]
 ====================================================================
 
-Work in progress...
-
 This exercise introduces a possible workflow to calculate the **SDG indicator 6.6.1**, which tracks how different types of water-related ecosystems change in extent over time. The indicator captures data on different types of freshwater ecosystems and measures their extent change. The indicator 6.6.1 is complex and it focuses on more aspects than just **the change in the spatial extent of permanent freshwater**, but for the exercise’s simplicity sake just this unit of measure will be presented in this section. This index will be presented by the **percentage change (∆) in the area of permanent waters**. We will calculate **∆** as:
 
 :math:`∆ = \frac{(α - β) + (ρ - σ)}{ε + β + σ}`, where:
@@ -153,7 +151,7 @@ For better visualization change the symbology of the new raster as shown in :num
 
 	Changing the symbology of the new raster 
 
-Now that we have a raster showing the changes in permanent water extent we want to know what is their area. To do so we chose the approach of vectorizing the transformation layer for easier computations later on. The process of transforming tre transformation raster layer into a vector layer is heavy and will take a considerable amount of time **(YOU CAN DOWNLOAD THE ALREADY VECTORIZED LAYER FROM THE WEBBOOK ZENODO FOLDER)**. To compute the vector layer we use the “*Polygonize (Raster to Vector)*” tool from the conversion raster tools (:numref:`4.4.14`). 
+Now that we have a raster showing the changes in permanent water extent we want to know what is their area. To do so we chose the approach of vectorizing the transformation layer for easier computations later on. The process of transforming tre transformation raster layer into a vector layer is heavy and will take a considerable amount of time (YOU CAN DOWNLOAD THE ALREADY VECTORIZED LAYER FROM THE `WEBBOOK ZENODO FOLDER <https://www.google.com/url?q=https://zenodo.org/record/7701984/files/CS-4_4-SDG-6_1_1.zip?download%3D1&sa=D&source=docs&ust=1678837226031511&usg=AOvVaw2ZxD1sC6nM3RGrglxdfUe1>`_). To compute the vector layer we use the “*Polygonize (Raster to Vector)*” tool from the conversion raster tools (:numref:`4.4.14`). 
 
 .. _4.4.14:
 .. figure:: /img/4.4/4.4.14.png

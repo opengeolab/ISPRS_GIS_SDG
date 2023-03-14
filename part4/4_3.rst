@@ -1,10 +1,10 @@
 Proportion of the rural population who live within 2 km of an all-season road [9.1.1]
 ======================================================================================
 
-This exercise"s purpose is to show how to compute the SDG indicator 9.1.1 defined as the share of a country"s rural population living within 2 km of an all-season road. This indicator is also commonly known as the Rural Access Index (RAI). To calculate the indicator it is needed to compute the ratio between the rural population within a 2 km buffer of an all-season road and the total rural population of the country.
+This exercise's purpose is to show how to compute the SDG indicator 9.1.1 defined as the share of a country's rural population living within 2 km of an all-season road. This indicator is also commonly known as the Rural Access Index (RAI). To calculate the indicator it is needed to compute the ratio between the rural population within a 2 km buffer of an all-season road and the total rural population of the country.
 To compute this indicator we need three different geospatial datasets:
 
-* The country"s population distribution, that can be retrieved from `WorldPop <https://hub.worldpop.org/>`_;
+* The country's population distribution, that can be retrieved from `WorldPop <https://hub.worldpop.org/>`_;
 
 	- From which it is necessary to extract only the rural population, which can be done using a Rural-Urban global definition provided by the `Global Human Settlement Layer <https://ghsl.jrc.ec.europa.eu/ghs_stat_ucdb2015mt_r2019a.php>`_;
 
@@ -97,6 +97,8 @@ The procedure of extracting selected features is presented in :numref:`4.3.8`, a
 
 We now need to create the 2 km buffer around the major roads, by using the "*Buffer*" geoprocessing tool (:numref:`4.3.10`). Because of reprojecting issues that may be encountered we input the distance in degrees.
 
+.. Warning:: To work with metric buffer distance units, reproject all the layers in the correct `UTM zone <https://www.dmap.co.uk/utmworld.htm>`_.
+
 .. _4.3.10:
 .. figure:: /img/4.3/4.3.10.png
 	:align: center
@@ -136,7 +138,7 @@ After this step we have the rural population within a 2 km buffer of a major roa
 .. _4.3.14:
 .. figure:: /img/4.3/4.3.14.png
 	:align: center
-	:width: 700px
+	:width: 500px
 
 	Restult of the "zonal statistics" operation
 
@@ -186,7 +188,7 @@ For better visualization purposes change the symbology of the new layer in its "
 
 	Changing the "*Gabon.shp*" symbology
 
-Now we can clip the urban extent layer to Gabon"s borders by using the “*Clip*” geoprocessing tool (:numref:`4.3.20`).
+Now we can clip the urban extent layer to Gabon's borders by using the “*Clip*” geoprocessing tool (:numref:`4.3.20`).
 
 .. _4.3.20:
 .. figure:: /img/4.3/4.3.20.png
@@ -195,7 +197,7 @@ Now we can clip the urban extent layer to Gabon"s borders by using the “*Clip*
 
 	Clipping the urban extent layer to Gabon's extent
 
-The urban extent polygons are now limited only to Gabon's extent. If we open the attribute table now, we can see that for each urban area there"s a distinct row. Since we are interested in the urban areas as a whole we want to have just one record for all the urban areas in Gabon. To do so we need to use the “*Dissolve*” geoprocessing tool as shown in :numref:`4.3.21`. 
+The urban extent polygons are now limited only to Gabon's extent. If we open the attribute table now, we can see that for each urban area there's a distinct row. Since we are interested in the urban areas as a whole we want to have just one record for all the urban areas in Gabon. To do so we need to use the “*Dissolve*” geoprocessing tool as shown in :numref:`4.3.21`. 
 
 .. _4.3.21:
 .. figure:: /img/4.3/4.3.21.png
