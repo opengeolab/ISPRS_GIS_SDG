@@ -79,7 +79,7 @@ University of New South Wales, Built Environment, Red Centre Building, Australia
 
 **Julia Anna Leonardi**
 
-Julia was born in Warsaw, Poland, in 1998. She received het B.Sc. degree in Geography with specialization in geoinformatics from the University of Warsaw. Her B.Sc. thesis was on assessment of different Machine Learning algorithms on hyperspectral images for high mountain vegetation classification. She is now persuing a M.Sc. in Geoinformatics Engineering at Politecnico di Milano. 
+Julia was born in Warsaw, Poland, in 1998. She received her B.Sc. degree in Geography with specialization in geoinformatics from the University of Warsaw. Her B.Sc. thesis was on assessment of different Machine Learning algorithms on hyperspectral images for high mountain vegetation classification. She is now persuing a M.Sc. in Geoinformatics Engineering at Politecnico di Milano. 
 
 ----------------------------------------------------------------------------------------------------------------------
 
