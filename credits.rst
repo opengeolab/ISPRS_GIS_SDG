@@ -86,7 +86,7 @@ Julia was born in Warsaw, Poland, in 1998. She received her B.Sc. degree in Geog
 **Contacts**
 
 Daniele Oxoli, PhD |br|
-Politecnico di Milano - GEOlab |br|
+`Politecnico di Milano - GEOlab <https://www.gisgeolab.polimi.it/>`_ |br| 
 Dept. of Civil and Environmental Engineering |br|
 Building 3a, P.zza Leonardo da Vinci 32, 20133 Milano (IT) |br|
 daniele.oxoli@polimi.it 
