@@ -29,7 +29,7 @@ In view of the above, this project, supported by the `Educational and Capacity B
    
    credits
 
-.. admonition:: This project was funded by the `International Society of Photogrammetry and Remote Sensing (ISPRS) <https://www.isprs.org>`_ within the `Educational and Capacity Building Initiative 2022 <https://www.isprs.org/society/ecbi/default.aspx>`_.
+.. important:: This project was funded by the `International Society of Photogrammetry and Remote Sensing (ISPRS) <https://www.isprs.org>`_ within the `Educational and Capacity Building Initiative 2022 <https://www.isprs.org/society/ecbi/default.aspx>`_.
 
 .. note:: All materials in this web-book are from public literature and the Internet. Unintended use herein of the copyrighted material is purely for educational purposes
 
