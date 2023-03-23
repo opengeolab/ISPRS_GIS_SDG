@@ -92,7 +92,7 @@ Building 3a, P.zza Leonardo da Vinci 32, 20133 Milano (IT) |br|
 daniele.oxoli@polimi.it 
 
 .. image:: img/logo_geolab.png
-    :width: 150px
+    :width: 200px
     :align: left
 
 .. |br| raw:: html
