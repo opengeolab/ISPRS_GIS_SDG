@@ -45,9 +45,16 @@ University of Pretoria, South Africa
 
 ----------------------------------------------------------------------------------------------------------------------
 
-**Prof. Ivana Ivanova**
+.. image:: img/credits/Ivana.png
+    :width: 160px
+    :align: left
 
-Curtin University, Australia
+**Dr Ivana Ivánová**
+
+Dr Ivana Ivánová is a Senior Lecturer in Spatial Sciences and FrontierSI Research Fellow in Spatial Information Infrastructures. Her research interests and expertise are in spatial data quality spatial resources and spatial information infrastructures.
+Dr Ivánová holds an engineering and doctoral degree, both from the Slovak University of Technology in Bratislava, in geodesy and cartography with specialization in Geoinformatics. She researched and lectured at several universities – Slovak University of Technology in Bratislava (2000-2007), University of Twente in the Netherlands (2007-2013) and São Paulo State University in Brazil (2014-2017).
+Dr Ivánová has extensive experience in standardization. From 2004 - 2007, she represented the Slovak national standardization organization in the CEN/TC 287 Geographic information’s Outreach Group. She has been overseeing and reviewing the adaptation of ISO 19100 series of norms into a national legal framework for geographic information. She currently leads development of ISO 19157-1 and ISO 19157-3 standards on geographic information quality.
+At ISO/TC211 Dr Ivánová is co-convening the Group on Ontology Maintenance and at Open Geospatial Consortium (OGC) she co-chairs the Data Quality Domain Working Group. Ivana represents Curtin University in the IT-004 Geographic information/Geomatics working group at Standards Australia. She regularly contributes to the work of several geospatial (incl. OSGeo, Geo4all, FOSS4G) and research (incl. RDA, ESIP and ARDC) communities.
 
 ----------------------------------------------------------------------------------------------------------------------
 
