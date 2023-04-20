@@ -10,7 +10,7 @@ To compute this indicator we need three different geospatial datasets:
 
 * The distribution of the road network, which can be accessed for all countries from `OpenStreetMap <http://www.openstreetmap.org/>`_;
 
-* The passability of the roads, which also can be found in the OpenStreetMap data.
+* The road network with road types attribute, which also can be found in the OpenStreetMap data.
 
 For more information about the background of the SDG indicator 9.1.1 refer to the metadata provided under this `link <https://unstats.un.org/sdgs/metadata/?Text=&Goal=9&Target=9.1>`_
 
