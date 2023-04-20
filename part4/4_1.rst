@@ -91,7 +91,7 @@ To extract the forest areas of Suriname we need to clip the forest raster layer 
 
 	Clip forest data raster layer by Suriname vector mask layer
 
-The forest raster layer is a Fractional Cover layer, this means that it gives the percentage of a 100 m pixel that is filled with forest. Pixels have values between 0 and 100, in steps of 1%. Since we just need the information whether the forest is present or not we will reclassify the layer using the Raster Calculator (:numref:`4.1.10`). We"ll classify the pixels with a value equal or bigger than 50% as forest (1) and the rest as no forest pixels (0). 
+The forest raster layer is a Fractional Cover layer, this means that it gives the percentage of a 100 m pixel that is filled with forest. Pixels have values between 0 and 100, in steps of 1%. Since we just need the information whether the forest is present or not, we will reclassify the layer using the Raster Calculator (:numref:`4.1.10`). We"ll classify the pixels with a value equal or bigger than 50% as forest (1) and the rest as no forest pixels (0). 
 
 .. _4.1.10:
 .. figure:: /img/4.1/4.1.10.png
@@ -116,7 +116,7 @@ After reclassifying the raster let"s change the symbology of the new layer for b
 	
 	Expected layer view after changing the reclassified layer symbology
 
-Since the pixels representing the forest have the value of 1 the sum of all the pixel values will give us the number of forest pixels in the raster file, and knowing the pixel"s size we can calculate the area of the forest in Suriname. To calculate the sum of the pixels values we"ll use the "*Zonal Statistics tool*"" (:numref:`4.1.13`).
+Since the pixels representing the forest have the value of 1 the sum of all the pixel values will give us the number of forest pixels in the raster file, and knowing the pixel"s size we can calculate the area of the forest in Suriname. To calculate the sum of the pixels values we"ll use the "*Zonal Statistics*"" tool (:numref:`4.1.13`).
 
 .. _4.1.13:
 .. figure:: /img/4.1/4.1.13.png
