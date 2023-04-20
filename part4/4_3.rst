@@ -51,14 +51,14 @@ Open a new QGIS project and add the downloaded population grid file (:numref:`4.
 	:align: center
 	:width: 700px
 
-	Adding the Gabon population raster layer to the QGIS project
+	Adding the vector layer of the Gabon road network to the QGIS project 
 
 .. _4.3.5:
 .. figure:: /img/4.3/4.3.5.png
 	:align: center
 	:width: 700px
 
-	Adding the vector layer of he Gabon road network to he QGIS project
+	Adding the Gabon population raster layer to the QGIS project
 
 Since we are interested only in all-season, major roads we need to extract only those from the shapefile vector layer. The information about the codes for the roads from the "*Format Specification*" for OSM data (:numref:`4.3.6`) indicates that the major roads have codes starting with 511. 
 
