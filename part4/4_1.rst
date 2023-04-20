@@ -91,7 +91,7 @@ To extract the forest areas of Suriname we need to clip the forest raster layer 
 
 	Clip forest data raster layer by Suriname vector mask layer
 
-he forest raster layer is a Fractional Cover layer, this means that it gives the percentage of a 100 m pixel that is filled with forest. Pixels have values between 0 and 100, in steps of 1%. Since we just need the information whether the forest is present or not we will reclassify the layer using the Raster Calculator (:numref:`4.1.10`). We"ll classify the pixels with a value equal or bigger than 50% as forest (1) and the rest as no forest pixels (0). 
+The forest raster layer is a Fractional Cover layer, this means that it gives the percentage of a 100 m pixel that is filled with forest. Pixels have values between 0 and 100, in steps of 1%. Since we just need the information whether the forest is present or not we will reclassify the layer using the Raster Calculator (:numref:`4.1.10`). We"ll classify the pixels with a value equal or bigger than 50% as forest (1) and the rest as no forest pixels (0). 
 
 .. _4.1.10:
 .. figure:: /img/4.1/4.1.10.png
