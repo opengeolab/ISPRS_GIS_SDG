@@ -8,9 +8,8 @@ To compute this indicator we need three different geospatial datasets:
 
 	- From which it is necessary to extract only the rural population, which can be done using a Rural-Urban global definition provided by the `Global Human Settlement Layer <https://ghsl.jrc.ec.europa.eu/ghs_stat_ucdb2015mt_r2019a.php>`_;
 
-* The distribution of the road network, which can be accessed for all countries from `OpenStreetMap <http://www.openstreetmap.org/>`_;
+* The road network with road types attribute, which can be accessed for all countries from `OpenStreetMap <http://www.openstreetmap.org/>`_;
 
-* The road network with road types attribute, which also can be found in the OpenStreetMap data.
 
 For more information about the background of the SDG indicator 9.1.1 refer to the metadata provided under this `link <https://unstats.un.org/sdgs/metadata/?Text=&Goal=9&Target=9.1>`_
 
