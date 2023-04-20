@@ -178,7 +178,7 @@ Now extract the selected feature to a new vector layer "*Gabon.shp*" (:numref:`4
 
 	Extracting the selected Gabon polygon
 
-For better visualization purposes change the symbology of the new layer in its "*Properties*", which can be accessed by right clicking the layer in the layers pane. An example of a clear symbology for a country's boundaries is presented in :numref:`4.3.19`.
+For better visualization purposes change the symbology of the new layer in its "*Properties*", which can be accessed by right clicking the layer in the layers panel. An example of a clear symbology for a country's boundaries is presented in :numref:`4.3.19`.
 
 .. _4.3.19:
 .. figure:: /img/4.3/4.3.19.png
