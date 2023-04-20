@@ -44,7 +44,7 @@ First, we need to download all the necessary data:
 
 	Downloading the road network data from OSM.
 
-Open a new QGIS project and add the downloaded population grid file (:numref:`4.3.4`) and the road network shapefile (:numref:`4.3.5`).
+Open a new QGIS project and add the road network shapefile (:numref:`4.3.4`) and the downloaded population grid file (:numref:`4.3.5`).
 
 .. _4.3.4:
 .. figure:: /img/4.3/4.3.4.png
