@@ -64,7 +64,7 @@ Now that we have the Suriname polygon, which will serve us to derive the land ar
 
 	Downloading forest data
 
-After downloading the file, add it to the project by using the "*Add Raster Layer*" function, which you"ll access analogically to the "*Add Vector Layer*" presented before.
+After downloading the file, add it to the project by using the "*Add Raster Layer*" function, which you"ll access analogously to the "*Add Vector Layer*" function presented before.
 
 .. _4.1.7:
 .. figure:: /img/4.1/4.1.7.png
